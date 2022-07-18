@@ -54,23 +54,31 @@
             this.textBoxRecursiveB = new System.Windows.Forms.TextBox();
             this.textBoxSelectionB = new System.Windows.Forms.TextBox();
             this.textBoxInsertionB = new System.Windows.Forms.TextBox();
+            this.columnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderB = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).BeginInit();
             this.SuspendLayout();
             // 
             // listView
             // 
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderA,
+            this.columnHeaderB});
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(53, 113);
+            this.listView.Location = new System.Drawing.Point(24, 118);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(121, 264);
+            this.listView.Size = new System.Drawing.Size(121, 271);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             // 
             // listBoxA
             // 
             this.listBoxA.FormattingEnabled = true;
-            this.listBoxA.Location = new System.Drawing.Point(307, 50);
+            this.listBoxA.Location = new System.Drawing.Point(278, 62);
             this.listBoxA.Name = "listBoxA";
             this.listBoxA.Size = new System.Drawing.Size(101, 329);
             this.listBoxA.TabIndex = 1;
@@ -78,14 +86,14 @@
             // listBoxB
             // 
             this.listBoxB.FormattingEnabled = true;
-            this.listBoxB.Location = new System.Drawing.Point(521, 50);
+            this.listBoxB.Location = new System.Drawing.Point(492, 62);
             this.listBoxB.Name = "listBoxB";
             this.listBoxB.Size = new System.Drawing.Size(128, 329);
             this.listBoxB.TabIndex = 2;
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(53, 84);
+            this.buttonLoad.Location = new System.Drawing.Point(24, 89);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(121, 23);
             this.buttonLoad.TabIndex = 3;
@@ -95,7 +103,7 @@
             // 
             // buttonBinaryIterativeA
             // 
-            this.buttonBinaryIterativeA.Location = new System.Drawing.Point(196, 84);
+            this.buttonBinaryIterativeA.Location = new System.Drawing.Point(167, 92);
             this.buttonBinaryIterativeA.Name = "buttonBinaryIterativeA";
             this.buttonBinaryIterativeA.Size = new System.Drawing.Size(88, 37);
             this.buttonBinaryIterativeA.TabIndex = 4;
@@ -105,7 +113,7 @@
             // 
             // buttonBinaryRecursiveA
             // 
-            this.buttonBinaryRecursiveA.Location = new System.Drawing.Point(196, 161);
+            this.buttonBinaryRecursiveA.Location = new System.Drawing.Point(167, 169);
             this.buttonBinaryRecursiveA.Name = "buttonBinaryRecursiveA";
             this.buttonBinaryRecursiveA.Size = new System.Drawing.Size(88, 38);
             this.buttonBinaryRecursiveA.TabIndex = 5;
@@ -115,7 +123,7 @@
             // 
             // buttonSelectionSortA
             // 
-            this.buttonSelectionSortA.Location = new System.Drawing.Point(196, 239);
+            this.buttonSelectionSortA.Location = new System.Drawing.Point(167, 247);
             this.buttonSelectionSortA.Name = "buttonSelectionSortA";
             this.buttonSelectionSortA.Size = new System.Drawing.Size(88, 39);
             this.buttonSelectionSortA.TabIndex = 6;
@@ -125,7 +133,7 @@
             // 
             // buttonInsertionSortA
             // 
-            this.buttonInsertionSortA.Location = new System.Drawing.Point(196, 318);
+            this.buttonInsertionSortA.Location = new System.Drawing.Point(167, 326);
             this.buttonInsertionSortA.Name = "buttonInsertionSortA";
             this.buttonInsertionSortA.Size = new System.Drawing.Size(88, 32);
             this.buttonInsertionSortA.TabIndex = 7;
@@ -135,7 +143,7 @@
             // 
             // buttonBinaryIterativeB
             // 
-            this.buttonBinaryIterativeB.Location = new System.Drawing.Point(424, 84);
+            this.buttonBinaryIterativeB.Location = new System.Drawing.Point(395, 92);
             this.buttonBinaryIterativeB.Name = "buttonBinaryIterativeB";
             this.buttonBinaryIterativeB.Size = new System.Drawing.Size(85, 37);
             this.buttonBinaryIterativeB.TabIndex = 8;
@@ -145,7 +153,7 @@
             // 
             // buttonBinaryRecursiveB
             // 
-            this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(424, 161);
+            this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(395, 169);
             this.buttonBinaryRecursiveB.Name = "buttonBinaryRecursiveB";
             this.buttonBinaryRecursiveB.Size = new System.Drawing.Size(85, 38);
             this.buttonBinaryRecursiveB.TabIndex = 9;
@@ -155,7 +163,7 @@
             // 
             // buttonSelectionSortB
             // 
-            this.buttonSelectionSortB.Location = new System.Drawing.Point(421, 239);
+            this.buttonSelectionSortB.Location = new System.Drawing.Point(392, 247);
             this.buttonSelectionSortB.Name = "buttonSelectionSortB";
             this.buttonSelectionSortB.Size = new System.Drawing.Size(85, 39);
             this.buttonSelectionSortB.TabIndex = 10;
@@ -165,7 +173,7 @@
             // 
             // buttonInsertionSortB
             // 
-            this.buttonInsertionSortB.Location = new System.Drawing.Point(421, 318);
+            this.buttonInsertionSortB.Location = new System.Drawing.Point(392, 326);
             this.buttonInsertionSortB.Name = "buttonInsertionSortB";
             this.buttonInsertionSortB.Size = new System.Drawing.Size(85, 32);
             this.buttonInsertionSortB.TabIndex = 11;
@@ -175,7 +183,7 @@
             // 
             // numericUpDownSigma
             // 
-            this.numericUpDownSigma.Location = new System.Drawing.Point(53, 22);
+            this.numericUpDownSigma.Location = new System.Drawing.Point(24, 63);
             this.numericUpDownSigma.Maximum = new decimal(new int[] {
             20,
             0,
@@ -197,7 +205,7 @@
             // 
             // numericUpDownMu
             // 
-            this.numericUpDownMu.Location = new System.Drawing.Point(125, 22);
+            this.numericUpDownMu.Location = new System.Drawing.Point(96, 63);
             this.numericUpDownMu.Maximum = new decimal(new int[] {
             75,
             0,
@@ -219,14 +227,14 @@
             // 
             // textBoxSearchA
             // 
-            this.textBoxSearchA.Location = new System.Drawing.Point(196, 50);
+            this.textBoxSearchA.Location = new System.Drawing.Point(167, 62);
             this.textBoxSearchA.Name = "textBoxSearchA";
             this.textBoxSearchA.Size = new System.Drawing.Size(88, 20);
             this.textBoxSearchA.TabIndex = 14;
             // 
             // textBoxSearchB
             // 
-            this.textBoxSearchB.Location = new System.Drawing.Point(424, 50);
+            this.textBoxSearchB.Location = new System.Drawing.Point(395, 62);
             this.textBoxSearchB.Name = "textBoxSearchB";
             this.textBoxSearchB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSearchB.TabIndex = 15;
@@ -234,7 +242,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(193, 34);
+            this.label1.Location = new System.Drawing.Point(164, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 16;
@@ -243,7 +251,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 34);
+            this.label2.Location = new System.Drawing.Point(392, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 17;
@@ -251,65 +259,103 @@
             // 
             // textBoxIterativeA
             // 
-            this.textBoxIterativeA.Location = new System.Drawing.Point(196, 128);
+            this.textBoxIterativeA.Location = new System.Drawing.Point(167, 139);
             this.textBoxIterativeA.Name = "textBoxIterativeA";
             this.textBoxIterativeA.Size = new System.Drawing.Size(88, 20);
             this.textBoxIterativeA.TabIndex = 18;
             // 
             // textBoxRecursiveA
             // 
-            this.textBoxRecursiveA.Location = new System.Drawing.Point(196, 206);
+            this.textBoxRecursiveA.Location = new System.Drawing.Point(167, 217);
             this.textBoxRecursiveA.Name = "textBoxRecursiveA";
             this.textBoxRecursiveA.Size = new System.Drawing.Size(100, 20);
             this.textBoxRecursiveA.TabIndex = 19;
             // 
             // textBoxSelectionA
             // 
-            this.textBoxSelectionA.Location = new System.Drawing.Point(196, 285);
+            this.textBoxSelectionA.Location = new System.Drawing.Point(167, 296);
             this.textBoxSelectionA.Name = "textBoxSelectionA";
             this.textBoxSelectionA.Size = new System.Drawing.Size(100, 20);
             this.textBoxSelectionA.TabIndex = 20;
             // 
             // textBoxInsertionA
             // 
-            this.textBoxInsertionA.Location = new System.Drawing.Point(196, 358);
+            this.textBoxInsertionA.Location = new System.Drawing.Point(167, 368);
             this.textBoxInsertionA.Name = "textBoxInsertionA";
             this.textBoxInsertionA.Size = new System.Drawing.Size(100, 20);
             this.textBoxInsertionA.TabIndex = 21;
             // 
             // textBoxIterativeB
             // 
-            this.textBoxIterativeB.Location = new System.Drawing.Point(424, 128);
+            this.textBoxIterativeB.Location = new System.Drawing.Point(395, 139);
             this.textBoxIterativeB.Name = "textBoxIterativeB";
             this.textBoxIterativeB.Size = new System.Drawing.Size(85, 20);
             this.textBoxIterativeB.TabIndex = 22;
             // 
             // textBoxRecursiveB
             // 
-            this.textBoxRecursiveB.Location = new System.Drawing.Point(424, 206);
+            this.textBoxRecursiveB.Location = new System.Drawing.Point(395, 217);
             this.textBoxRecursiveB.Name = "textBoxRecursiveB";
             this.textBoxRecursiveB.Size = new System.Drawing.Size(82, 20);
             this.textBoxRecursiveB.TabIndex = 23;
             // 
             // textBoxSelectionB
             // 
-            this.textBoxSelectionB.Location = new System.Drawing.Point(421, 285);
+            this.textBoxSelectionB.Location = new System.Drawing.Point(392, 296);
             this.textBoxSelectionB.Name = "textBoxSelectionB";
             this.textBoxSelectionB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSelectionB.TabIndex = 24;
             // 
             // textBoxInsertionB
             // 
-            this.textBoxInsertionB.Location = new System.Drawing.Point(421, 358);
+            this.textBoxInsertionB.Location = new System.Drawing.Point(392, 368);
             this.textBoxInsertionB.Name = "textBoxInsertionB";
             this.textBoxInsertionB.Size = new System.Drawing.Size(85, 20);
             this.textBoxInsertionB.TabIndex = 25;
+            // 
+            // columnHeaderA
+            // 
+            this.columnHeaderA.Text = "Sensor A";
+            // 
+            // columnHeaderB
+            // 
+            this.columnHeaderB.Text = "Sensor B";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Sigma:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(93, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Mu:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(237, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "MSSS DATA PROCESSING";
             // 
             // DataProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(646, 412);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxInsertionB);
             this.Controls.Add(this.textBoxSelectionB);
             this.Controls.Add(this.textBoxRecursiveB);
@@ -373,6 +419,11 @@
         private System.Windows.Forms.TextBox textBoxRecursiveB;
         private System.Windows.Forms.TextBox textBoxSelectionB;
         private System.Windows.Forms.TextBox textBoxInsertionB;
+        private System.Windows.Forms.ColumnHeader columnHeaderA;
+        private System.Windows.Forms.ColumnHeader columnHeaderB;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

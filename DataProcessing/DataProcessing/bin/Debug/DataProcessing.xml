@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataProcessing</name>
+    </assembly>
+    <members>
+        <member name="F:DataProcessing.DataProcessing.sensorAData">
+            <summary>
+            4.1 Create two data structures using the LinkedList class. The data must be of type "double"
+            The two LinkedLists are to be declared as global within the public partial class
+            </summary>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.LoadData">
+            <summary>
+            4.2 Create a method "LoadData" which will populate both LinkedLists. Declare an instance of the Galileo
+            library in the method and create the appropriate loop construct to populate the two LinkedLists. The
+            LinkedList size will be hardcoded to 400. Input parameters empty, return type void.
+            </summary>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.ShowAllSensorData">
+            <summary>
+            4.3 Create a custom method called "ShowAllSensorData" which will display both LinkedLists in a ListView.
+            The input parameters are empty and the return type is void.
+            </summary>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.buttonLoad_Click(System.Object,System.EventArgs)">
+            <summary>
+            4.4 Create a button and associated click method that will call the LoadData and ShowAllSensorData methods
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.NumberOfNodes(System.Collections.Generic.LinkedList{System.Double},System.String)">
+            <summary>
+            4.5 Create a method called “NumberOfNodes” that will return an integer which is the number of 
+            nodes(elements) in a LinkedList. 
+            </summary>
+            <param name="list"></param>
+            <param name="listBoxName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.DisplayListboxData(System.Collections.Generic.LinkedList{System.Double},System.String)">
+            <summary>
+            4.6	Create a method called “DisplayListboxData” that will display the content of a LinkedList 
+            inside the appropriate ListBox.
+            </summary>
+            <param name="list"></param>
+            <param name="listBoxName"></param>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.SelectionSort(System.Collections.Generic.LinkedList{System.Double})">
+            <summary>
+            4.7	Create a method called “SelectionSort” which has a single input parameter of type LinkedList, 
+            while the calling code argument is the linkedlist name. 
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.InsertionSort(System.Collections.Generic.LinkedList{System.Double})">
+            <summary>
+            4.8	Create a method called “InsertionSort” which has a single parameter of type LinkedList, 
+            while the calling code argument is the linkedlist name. 
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.BinarySearchIterative(System.Collections.Generic.LinkedList{System.Double},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            4.9	Create a method called “BinarySearchIterative” which has the following four parameters: 
+            LinkedList, SearchValue, Minimum and Maximum. This method will return an integer of the 
+            linkedlist element from a successful search or the nearest neighbour value. The calling code 
+            argument is the linkedlist name, search value, minimum list size and the number of nodes in the list.
+            </summary>
+            <param name="list"></param>
+            <param name="target"></param>
+            <param name="minimum"></param>
+            <param name="numberOfNodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.BinarySearchRecursive(System.Collections.Generic.LinkedList{System.Double},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            4.10	Create a method called “BinarySearchRecursive” which has the following four parameters: 
+            LinkedList, SearchValue, Minimum and Maximum. This method will return an integer of the linkedlist 
+            element from a successful search or the nearest neighbour value. The calling code argument is the 
+            linkedlist name, search value, minimum list size and the number of nodes in the list. 
+            </summary>
+            <param name="list"></param>
+            <param name="searchTarget"></param>
+            <param name="minimumListSize"></param>
+            <param name="numberOfNodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.buttonBinaryIterativeA_Click(System.Object,System.EventArgs)">
+            <summary>
+            4.11	Create four button click methods that will search the LinkedList for a value entered into a 
+            textbox on the form. The search code must check to ensure the data is sorted, then start a stopwatch 
+            before calling the search method. Once the search is complete the stopwatch will stop and the number 
+            of ticks will be displayed in a read only textbox. Finally, the code will call the “DisplayListboxData” 
+            method and highlight the appropriate number (or the next closest number). 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.buttonSelectionSortA_Click(System.Object,System.EventArgs)">
+            <summary>
+            4.12	Create four button click methods that will sort the LinkedList using the Selection and Insertion 
+            methods. The button method must start a stopwatch before calling the sort method. Once the sort is complete 
+            the stopwatch will stop and the number of milliseconds will be displayed in a read only textbox. Finally, 
+            the code will call the “ShowAllSensorData” method and “DisplayListboxData” for the appropriate sensor.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:DataProcessing.DataProcessing.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DataProcessing.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:DataProcessing.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DataProcessing.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DataProcessing.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

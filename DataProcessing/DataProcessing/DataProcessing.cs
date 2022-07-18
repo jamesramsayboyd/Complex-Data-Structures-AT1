@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Galileo; // Importing Galileo.dll
 
 // James Boyd 30041547
 // Cluster - Complex Data Structures Assessment 1
@@ -26,8 +28,8 @@ namespace DataProcessing
         /// 4.1 Create two data structures using the LinkedList class. The data must be of type "double"
         /// The two LinkedLists are to be declared as global within the public partial class
         /// </summary>
-        LinkedList<double> sensorA = new LinkedList<double>();
-        LinkedList<double> sensorB = new LinkedList<double>();
+        LinkedList<double> sensorAData = new LinkedList<double>();
+        LinkedList<double> sensorBData = new LinkedList<double>();
 
         /// <summary>
         /// 4.2 Create a method "LoadData" which will populate both LinkedLists. Declare an instance of the Galileo
@@ -36,7 +38,15 @@ namespace DataProcessing
         /// </summary>
         public void LoadData()
         {
-            // Load data from Galileo.dll
+            ReadData readData = new ReadData();
+            int maxDataSize = 400;
+            sensorAData.Clear();
+            sensorBData.Clear();
+            for (int i = 0; i < maxDataSize; i++)
+            {
+                //sensorAData.AddLast(readData.SensorA((double)Mu.Value, (double)Sigma.Value));
+                //sensorBData.AddLast(readData.SensorB((double)Mu.Value, (double)Sigma.Value));
+            }
         }
 
         /// <summary>
@@ -45,7 +55,14 @@ namespace DataProcessing
         /// </summary>
         public void ShowAllSensorData()
         {
-            // Display sensor A and sensor B data in listview and listboxes
+            // TODO: Display sensor A and sensor B data in listview
+            listView.Items.Clear();
+            ListViewItem lvi = new ListViewItem();
+            foreach (var datum in sensorAData)
+            {
+                lvi.SubItems.Add(datum.ToString());
+                listView.Items.Add(lvi);
+            }
         }
 
         /// <summary>
@@ -69,8 +86,7 @@ namespace DataProcessing
         /// <returns></returns>
         private int NumberOfNodes (LinkedList<double> list, string listBoxName)
         {
-            // TODO: Count number of nodes in specified list
-            return 0;
+            return list.Count();
         }
 
         /// <summary>
@@ -79,9 +95,13 @@ namespace DataProcessing
         /// </summary>
         /// <param name="list"></param>
         /// <param name="listBoxName"></param>
-        private void DisplayListboxData (LinkedList<double> list, string listBoxName)
+        private void DisplayListboxData (LinkedList<double> list, ListBox listBoxName)
         {
-            // TODO: Display data in desired listbox
+            listBoxName.Items.Clear();
+            foreach (var datum in list)
+            {
+                listBoxName.Items.Add(datum);
+            }
         }
 
         #endregion UTILITIES
