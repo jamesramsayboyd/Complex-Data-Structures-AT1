@@ -10,3 +10,17 @@ C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\Da
 C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\DataProcessing.pdb
 C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.exe
 C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.pdb
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\DataProcessing.exe.config
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\DataProcessing.xml
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\DataProcessing.exe
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\DataProcessing.pdb
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\Galileo.dll
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.AssemblyReference.cache
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.SuggestedBindingRedirects.cache
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.DataProcessing.resources
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.Properties.Resources.resources
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.GenerateResource.cache
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CoreCompileInputs.cache
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CopyComplete
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.exe
+C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.pdb

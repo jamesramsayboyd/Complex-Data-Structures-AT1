@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.listView = new System.Windows.Forms.ListView();
+            this.columnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderB = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listBoxA = new System.Windows.Forms.ListBox();
             this.listBoxB = new System.Windows.Forms.ListBox();
             this.buttonLoad = new System.Windows.Forms.Button();
@@ -54,8 +56,6 @@
             this.textBoxRecursiveB = new System.Windows.Forms.TextBox();
             this.textBoxSelectionB = new System.Windows.Forms.TextBox();
             this.textBoxInsertionB = new System.Windows.Forms.TextBox();
-            this.columnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderB = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,14 +71,25 @@
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(24, 118);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(121, 271);
+            this.listView.Size = new System.Drawing.Size(165, 271);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderA
+            // 
+            this.columnHeaderA.Text = "Sensor A";
+            this.columnHeaderA.Width = 72;
+            // 
+            // columnHeaderB
+            // 
+            this.columnHeaderB.Text = "Sensor B";
+            this.columnHeaderB.Width = 72;
             // 
             // listBoxA
             // 
             this.listBoxA.FormattingEnabled = true;
-            this.listBoxA.Location = new System.Drawing.Point(278, 62);
+            this.listBoxA.Location = new System.Drawing.Point(335, 63);
             this.listBoxA.Name = "listBoxA";
             this.listBoxA.Size = new System.Drawing.Size(101, 329);
             this.listBoxA.TabIndex = 1;
@@ -86,9 +97,9 @@
             // listBoxB
             // 
             this.listBoxB.FormattingEnabled = true;
-            this.listBoxB.Location = new System.Drawing.Point(492, 62);
+            this.listBoxB.Location = new System.Drawing.Point(549, 63);
             this.listBoxB.Name = "listBoxB";
-            this.listBoxB.Size = new System.Drawing.Size(128, 329);
+            this.listBoxB.Size = new System.Drawing.Size(101, 329);
             this.listBoxB.TabIndex = 2;
             // 
             // buttonLoad
@@ -103,7 +114,7 @@
             // 
             // buttonBinaryIterativeA
             // 
-            this.buttonBinaryIterativeA.Location = new System.Drawing.Point(167, 92);
+            this.buttonBinaryIterativeA.Location = new System.Drawing.Point(224, 93);
             this.buttonBinaryIterativeA.Name = "buttonBinaryIterativeA";
             this.buttonBinaryIterativeA.Size = new System.Drawing.Size(88, 37);
             this.buttonBinaryIterativeA.TabIndex = 4;
@@ -113,7 +124,7 @@
             // 
             // buttonBinaryRecursiveA
             // 
-            this.buttonBinaryRecursiveA.Location = new System.Drawing.Point(167, 169);
+            this.buttonBinaryRecursiveA.Location = new System.Drawing.Point(224, 170);
             this.buttonBinaryRecursiveA.Name = "buttonBinaryRecursiveA";
             this.buttonBinaryRecursiveA.Size = new System.Drawing.Size(88, 38);
             this.buttonBinaryRecursiveA.TabIndex = 5;
@@ -123,7 +134,7 @@
             // 
             // buttonSelectionSortA
             // 
-            this.buttonSelectionSortA.Location = new System.Drawing.Point(167, 247);
+            this.buttonSelectionSortA.Location = new System.Drawing.Point(224, 248);
             this.buttonSelectionSortA.Name = "buttonSelectionSortA";
             this.buttonSelectionSortA.Size = new System.Drawing.Size(88, 39);
             this.buttonSelectionSortA.TabIndex = 6;
@@ -133,7 +144,7 @@
             // 
             // buttonInsertionSortA
             // 
-            this.buttonInsertionSortA.Location = new System.Drawing.Point(167, 326);
+            this.buttonInsertionSortA.Location = new System.Drawing.Point(224, 327);
             this.buttonInsertionSortA.Name = "buttonInsertionSortA";
             this.buttonInsertionSortA.Size = new System.Drawing.Size(88, 32);
             this.buttonInsertionSortA.TabIndex = 7;
@@ -143,7 +154,7 @@
             // 
             // buttonBinaryIterativeB
             // 
-            this.buttonBinaryIterativeB.Location = new System.Drawing.Point(395, 92);
+            this.buttonBinaryIterativeB.Location = new System.Drawing.Point(452, 93);
             this.buttonBinaryIterativeB.Name = "buttonBinaryIterativeB";
             this.buttonBinaryIterativeB.Size = new System.Drawing.Size(85, 37);
             this.buttonBinaryIterativeB.TabIndex = 8;
@@ -153,7 +164,7 @@
             // 
             // buttonBinaryRecursiveB
             // 
-            this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(395, 169);
+            this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(452, 170);
             this.buttonBinaryRecursiveB.Name = "buttonBinaryRecursiveB";
             this.buttonBinaryRecursiveB.Size = new System.Drawing.Size(85, 38);
             this.buttonBinaryRecursiveB.TabIndex = 9;
@@ -163,7 +174,7 @@
             // 
             // buttonSelectionSortB
             // 
-            this.buttonSelectionSortB.Location = new System.Drawing.Point(392, 247);
+            this.buttonSelectionSortB.Location = new System.Drawing.Point(449, 248);
             this.buttonSelectionSortB.Name = "buttonSelectionSortB";
             this.buttonSelectionSortB.Size = new System.Drawing.Size(85, 39);
             this.buttonSelectionSortB.TabIndex = 10;
@@ -173,7 +184,7 @@
             // 
             // buttonInsertionSortB
             // 
-            this.buttonInsertionSortB.Location = new System.Drawing.Point(392, 326);
+            this.buttonInsertionSortB.Location = new System.Drawing.Point(449, 327);
             this.buttonInsertionSortB.Name = "buttonInsertionSortB";
             this.buttonInsertionSortB.Size = new System.Drawing.Size(85, 32);
             this.buttonInsertionSortB.TabIndex = 11;
@@ -227,14 +238,14 @@
             // 
             // textBoxSearchA
             // 
-            this.textBoxSearchA.Location = new System.Drawing.Point(167, 62);
+            this.textBoxSearchA.Location = new System.Drawing.Point(224, 63);
             this.textBoxSearchA.Name = "textBoxSearchA";
             this.textBoxSearchA.Size = new System.Drawing.Size(88, 20);
             this.textBoxSearchA.TabIndex = 14;
             // 
             // textBoxSearchB
             // 
-            this.textBoxSearchB.Location = new System.Drawing.Point(395, 62);
+            this.textBoxSearchB.Location = new System.Drawing.Point(452, 63);
             this.textBoxSearchB.Name = "textBoxSearchB";
             this.textBoxSearchB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSearchB.TabIndex = 15;
@@ -242,7 +253,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 46);
+            this.label1.Location = new System.Drawing.Point(221, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 16;
@@ -251,7 +262,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(392, 46);
+            this.label2.Location = new System.Drawing.Point(449, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 17;
@@ -259,67 +270,59 @@
             // 
             // textBoxIterativeA
             // 
-            this.textBoxIterativeA.Location = new System.Drawing.Point(167, 139);
+            this.textBoxIterativeA.Location = new System.Drawing.Point(224, 140);
             this.textBoxIterativeA.Name = "textBoxIterativeA";
             this.textBoxIterativeA.Size = new System.Drawing.Size(88, 20);
             this.textBoxIterativeA.TabIndex = 18;
             // 
             // textBoxRecursiveA
             // 
-            this.textBoxRecursiveA.Location = new System.Drawing.Point(167, 217);
+            this.textBoxRecursiveA.Location = new System.Drawing.Point(224, 218);
             this.textBoxRecursiveA.Name = "textBoxRecursiveA";
             this.textBoxRecursiveA.Size = new System.Drawing.Size(100, 20);
             this.textBoxRecursiveA.TabIndex = 19;
             // 
             // textBoxSelectionA
             // 
-            this.textBoxSelectionA.Location = new System.Drawing.Point(167, 296);
+            this.textBoxSelectionA.Location = new System.Drawing.Point(224, 297);
             this.textBoxSelectionA.Name = "textBoxSelectionA";
             this.textBoxSelectionA.Size = new System.Drawing.Size(100, 20);
             this.textBoxSelectionA.TabIndex = 20;
             // 
             // textBoxInsertionA
             // 
-            this.textBoxInsertionA.Location = new System.Drawing.Point(167, 368);
+            this.textBoxInsertionA.Location = new System.Drawing.Point(224, 369);
             this.textBoxInsertionA.Name = "textBoxInsertionA";
             this.textBoxInsertionA.Size = new System.Drawing.Size(100, 20);
             this.textBoxInsertionA.TabIndex = 21;
             // 
             // textBoxIterativeB
             // 
-            this.textBoxIterativeB.Location = new System.Drawing.Point(395, 139);
+            this.textBoxIterativeB.Location = new System.Drawing.Point(452, 140);
             this.textBoxIterativeB.Name = "textBoxIterativeB";
             this.textBoxIterativeB.Size = new System.Drawing.Size(85, 20);
             this.textBoxIterativeB.TabIndex = 22;
             // 
             // textBoxRecursiveB
             // 
-            this.textBoxRecursiveB.Location = new System.Drawing.Point(395, 217);
+            this.textBoxRecursiveB.Location = new System.Drawing.Point(452, 218);
             this.textBoxRecursiveB.Name = "textBoxRecursiveB";
             this.textBoxRecursiveB.Size = new System.Drawing.Size(82, 20);
             this.textBoxRecursiveB.TabIndex = 23;
             // 
             // textBoxSelectionB
             // 
-            this.textBoxSelectionB.Location = new System.Drawing.Point(392, 296);
+            this.textBoxSelectionB.Location = new System.Drawing.Point(449, 297);
             this.textBoxSelectionB.Name = "textBoxSelectionB";
             this.textBoxSelectionB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSelectionB.TabIndex = 24;
             // 
             // textBoxInsertionB
             // 
-            this.textBoxInsertionB.Location = new System.Drawing.Point(392, 368);
+            this.textBoxInsertionB.Location = new System.Drawing.Point(449, 369);
             this.textBoxInsertionB.Name = "textBoxInsertionB";
             this.textBoxInsertionB.Size = new System.Drawing.Size(85, 20);
             this.textBoxInsertionB.TabIndex = 25;
-            // 
-            // columnHeaderA
-            // 
-            this.columnHeaderA.Text = "Sensor A";
-            // 
-            // columnHeaderB
-            // 
-            this.columnHeaderB.Text = "Sensor B";
             // 
             // label3
             // 
@@ -352,7 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 412);
+            this.ClientSize = new System.Drawing.Size(691, 412);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

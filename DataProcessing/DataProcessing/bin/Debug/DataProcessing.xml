@@ -4,7 +4,7 @@
         <name>DataProcessing</name>
     </assembly>
     <members>
-        <member name="F:DataProcessing.DataProcessing.sensorAData">
+        <member name="F:DataProcessing.DataProcessing.sensorA">
             <summary>
             4.1 Create two data structures using the LinkedList class. The data must be of type "double"
             The two LinkedLists are to be declared as global within the public partial class
@@ -39,7 +39,7 @@
             <param name="listBoxName"></param>
             <returns></returns>
         </member>
-        <member name="M:DataProcessing.DataProcessing.DisplayListboxData(System.Collections.Generic.LinkedList{System.Double},System.String)">
+        <member name="M:DataProcessing.DataProcessing.DisplayListboxData(System.Collections.Generic.LinkedList{System.Double},System.Windows.Forms.ListBox)">
             <summary>
             4.6	Create a method called “DisplayListboxData” that will display the content of a LinkedList 
             inside the appropriate ListBox.
@@ -71,8 +71,8 @@
             argument is the linkedlist name, search value, minimum list size and the number of nodes in the list.
             </summary>
             <param name="list"></param>
-            <param name="target"></param>
-            <param name="minimum"></param>
+            <param name="searchTarget"></param>
+            <param name="minimumListSize"></param>
             <param name="numberOfNodes"></param>
             <returns></returns>
         </member>

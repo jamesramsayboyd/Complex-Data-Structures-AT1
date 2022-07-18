@@ -28,8 +28,8 @@ namespace DataProcessing
         /// 4.1 Create two data structures using the LinkedList class. The data must be of type "double"
         /// The two LinkedLists are to be declared as global within the public partial class
         /// </summary>
-        LinkedList<double> sensorAData = new LinkedList<double>();
-        LinkedList<double> sensorBData = new LinkedList<double>();
+        LinkedList<double> sensorA = new LinkedList<double>();
+        LinkedList<double> sensorB = new LinkedList<double>();
 
         /// <summary>
         /// 4.2 Create a method "LoadData" which will populate both LinkedLists. Declare an instance of the Galileo
@@ -40,12 +40,12 @@ namespace DataProcessing
         {
             ReadData readData = new ReadData();
             int maxDataSize = 400;
-            sensorAData.Clear();
-            sensorBData.Clear();
+            sensorA.Clear();
+            sensorB.Clear();
             for (int i = 0; i < maxDataSize; i++)
             {
-                //sensorAData.AddLast(readData.SensorA((double)Mu.Value, (double)Sigma.Value));
-                //sensorBData.AddLast(readData.SensorB((double)Mu.Value, (double)Sigma.Value));
+                sensorA.AddLast(readData.SensorA(mu:i, sigma:i));
+                sensorB.AddLast(readData.SensorB(mu:i, sigma:i));
             }
         }
 
@@ -55,12 +55,11 @@ namespace DataProcessing
         /// </summary>
         public void ShowAllSensorData()
         {
-            // TODO: Display sensor A and sensor B data in listview
             listView.Items.Clear();
-            ListViewItem lvi = new ListViewItem();
-            foreach (var datum in sensorAData)
+            for (int i = 0; i < sensorA.Count; i++)
             {
-                lvi.SubItems.Add(datum.ToString());
+                ListViewItem lvi = new ListViewItem(sensorA.ElementAt(i).ToString());
+                lvi.SubItems.Add(sensorB.ElementAt(i).ToString());
                 listView.Items.Add(lvi);
             }
         }
@@ -138,8 +137,8 @@ namespace DataProcessing
         /// argument is the linkedlist name, search value, minimum list size and the number of nodes in the list.
         /// </summary>
         /// <param name="list"></param>
-        /// <param name="target"></param>
-        /// <param name="minimum"></param>
+        /// <param name="searchTarget"></param>
+        /// <param name="minimumListSize"></param>
         /// <param name="numberOfNodes"></param>
         /// <returns></returns>
         public int BinarySearchIterative(LinkedList<double> list, int searchTarget, int minimumListSize, int numberOfNodes)
