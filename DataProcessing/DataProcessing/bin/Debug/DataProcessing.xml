@@ -30,18 +30,17 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:DataProcessing.DataProcessing.NumberOfNodes(System.Collections.Generic.LinkedList{System.Double},System.String)">
+        <member name="M:DataProcessing.DataProcessing.NumberOfNodes(System.Collections.Generic.LinkedList{System.Double})">
             <summary>
             4.5 Create a method called “NumberOfNodes” that will return an integer which is the number of 
             nodes(elements) in a LinkedList. 
             </summary>
             <param name="list"></param>
-            <param name="listBoxName"></param>
             <returns></returns>
         </member>
-        <member name="M:DataProcessing.DataProcessing.DisplayListboxData(System.Collections.Generic.LinkedList{System.Double},System.Windows.Forms.ListBox)">
+        <member name="M:DataProcessing.DataProcessing.DisplayListBoxData(System.Collections.Generic.LinkedList{System.Double},System.Windows.Forms.ListBox)">
             <summary>
-            4.6	Create a method called “DisplayListboxData” that will display the content of a LinkedList 
+            4.6	Create a method called “DisplayListBoxData” that will display the content of a LinkedList 
             inside the appropriate ListBox.
             </summary>
             <param name="list"></param>

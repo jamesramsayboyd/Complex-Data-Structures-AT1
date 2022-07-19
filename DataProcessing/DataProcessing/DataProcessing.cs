@@ -73,6 +73,8 @@ namespace DataProcessing
         {
             LoadData();
             ShowAllSensorData();
+            DisplayListBoxData(sensorA, listBoxA);
+            DisplayListBoxData(sensorB, listBoxB);
         }
 
         #region UTILITIES
@@ -81,20 +83,19 @@ namespace DataProcessing
         /// nodes(elements) in a LinkedList. 
         /// </summary>
         /// <param name="list"></param>
-        /// <param name="listBoxName"></param>
         /// <returns></returns>
-        private int NumberOfNodes (LinkedList<double> list, string listBoxName)
+        private int NumberOfNodes (LinkedList<double> list)
         {
             return list.Count();
         }
 
         /// <summary>
-        /// 4.6	Create a method called “DisplayListboxData” that will display the content of a LinkedList 
+        /// 4.6	Create a method called “DisplayListBoxData” that will display the content of a LinkedList 
         /// inside the appropriate ListBox.
         /// </summary>
         /// <param name="list"></param>
         /// <param name="listBoxName"></param>
-        private void DisplayListboxData (LinkedList<double> list, ListBox listBoxName)
+        private void DisplayListBoxData (LinkedList<double> list, ListBox listBoxName)
         {
             listBoxName.Items.Clear();
             foreach (var datum in list)
@@ -114,6 +115,26 @@ namespace DataProcessing
         /// <returns></returns>
         public bool SelectionSort (LinkedList<double> list)
         {
+            int minimum;
+            int maximum = NumberOfNodes(list);
+            int i;
+            for (i = 0; i < maximum; i++)
+            {
+                minimum = i;
+                for (int j = i + 1; j < maximum; j++)
+                {
+                    if (list.ElementAt(j) < list.ElementAt(minimum))
+                    {
+                        minimum = j;
+                    }
+                }
+
+                LinkedListNode<double> currentMin = list.Find(list.ElementAt(minimum));
+                LinkedListNode<double> currentI = list.Find(list.ElementAt(i));
+                var temp = currentMin.Value;
+                currentMin.Value = currentI.Value;
+                currentI.Value = temp;
+            }
             return true;
         }
 
@@ -125,6 +146,21 @@ namespace DataProcessing
         /// <returns></returns>
         public bool InsertionSort (LinkedList<double> list)
         {
+            int maximum = NumberOfNodes(list);
+            for (int i = 0; i < maximum - 1; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    if (list.ElementAt(j - 1) > list.ElementAt(j))
+                    {
+                        LinkedListNode<double> current = list.Find(list.ElementAt(j));
+                        LinkedListNode<double> previous = list.Find(list.ElementAt(j - 1));
+                        var temp = current.Value;
+                        current.Value = previous.Value;
+                        previous.Value = temp;
+                    }
+                }
+            }
             return true;
         }
         #endregion SORT METHODS
@@ -203,22 +239,30 @@ namespace DataProcessing
         /// <param name="e"></param>
         private void buttonSelectionSortA_Click(object sender, EventArgs e)
         {
-
+            SelectionSort(sensorA);
+            DisplayListBoxData(sensorA, listBoxA);
+            textBoxSelectionA.Text = "time taken";
         }
 
         private void buttonInsertionSortA_Click(object sender, EventArgs e)
         {
-
+            InsertionSort(sensorA);
+            DisplayListBoxData(sensorA, listBoxA);
+            textBoxInsertionA.Text = "time taken";
         }
 
         private void buttonSelectionSortB_Click(object sender, EventArgs e)
         {
-
+            SelectionSort(sensorB);
+            DisplayListBoxData(sensorB, listBoxB);
+            textBoxSelectionB.Text = "time taken";
         }
 
         private void buttonInsertionSortB_Click(object sender, EventArgs e)
         {
-
+            InsertionSort(sensorB);
+            DisplayListBoxData(sensorB, listBoxB);
+            textBoxInsertionB.Text = "time taken";
         }
 
 

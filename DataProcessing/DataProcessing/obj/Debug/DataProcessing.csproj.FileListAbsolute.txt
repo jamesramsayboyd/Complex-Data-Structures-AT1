@@ -24,3 +24,5 @@ C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataP
 C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CopyComplete
 C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.exe
 C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.pdb
+C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\Galileo.dll
+C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CopyComplete
