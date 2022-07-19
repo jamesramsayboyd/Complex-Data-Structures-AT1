@@ -115,6 +115,14 @@ namespace DataProcessing
             listBoxName.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             for (int i = index - 2; i <= index + 2; i++)
             {
+                if (i < 0)
+                {
+                    continue;
+                }
+                if (i >= 400)
+                {
+                    continue;
+                }
                 listBoxName.SetSelected(i, true);
             }
         }
@@ -264,24 +272,28 @@ namespace DataProcessing
         {
             int index = BinarySearchIterative(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
             SelectListBoxRange(listBoxA, index);
+            textBoxIterativeA.Text = "time taken";
         }
 
         private void buttonBinaryRecursiveA_Click(object sender, EventArgs e)
         {
             int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
             SelectListBoxRange(listBoxA, index);
+            textBoxRecursiveA.Text = "time taken";
         }
 
         private void buttonBinaryIterativeB_Click(object sender, EventArgs e)
         {
             int index = BinarySearchIterative(sensorB, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
             SelectListBoxRange(listBoxB, index);
+            textBoxIterativeB.Text = "time taken";
         }
 
         private void buttonBinaryRecursiveB_Click(object sender, EventArgs e)
         {
             int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
             SelectListBoxRange(listBoxB, index);
+            textBoxRecursiveB.Text = "time taken";
         }
 
         /// <summary>
