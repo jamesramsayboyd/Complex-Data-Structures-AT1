@@ -179,7 +179,25 @@ namespace DataProcessing
         /// <returns></returns>
         public int BinarySearchIterative(LinkedList<double> list, int searchTarget, int minimumListSize, int numberOfNodes)
         {
-            return 0;
+            int minimum = minimumListSize;
+            int maximum = numberOfNodes;
+            while (minimum <= maximum - 1)
+            {
+                int middle = (minimum + maximum) / 2;
+                if (searchTarget == list.ElementAt(middle))
+                {
+                    return middle;
+                }
+                else if (searchTarget < list.ElementAt(middle))
+                {
+                    maximum = middle - 1;
+                }
+                else
+                {
+                    minimum = middle + 1;
+                }
+            }
+            return minimum;
         }
 
         /// <summary>
@@ -195,7 +213,25 @@ namespace DataProcessing
         /// <returns></returns>
         public int BinarySearchRecursive(LinkedList<double> list, int searchTarget, int minimumListSize, int numberOfNodes)
         {
-            return 0;
+            int minimum = minimumListSize;
+            int maximum = numberOfNodes;
+            while (minimum <= maximum - 1)
+            {
+                int middle = (minimum + maximum) / 2;
+                if (searchTarget == list.ElementAt(middle))
+                {
+                    return middle;
+                }
+                else if (searchTarget < list.ElementAt(middle))
+                {
+                    return BinarySearchRecursive(list, searchTarget, minimum, middle - 1);
+                }
+                else
+                {
+                    return BinarySearchRecursive(list, searchTarget, middle + 1, maximum);
+                }
+            }
+            return minimum;
         }
         #endregion SEARCH METHODS
 
