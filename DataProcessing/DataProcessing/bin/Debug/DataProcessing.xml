@@ -46,6 +46,13 @@
             <param name="list"></param>
             <param name="listBoxName"></param>
         </member>
+        <member name="M:DataProcessing.DataProcessing.SelectListBoxRange(System.Windows.Forms.ListBox,System.Int32)">
+            <summary>
+            A method that highlights a range of ListBox Items +-2 from the given index
+            </summary>
+            <param name="listBoxName"></param>
+            <param name="index"></param>
+        </member>
         <member name="M:DataProcessing.DataProcessing.SelectionSort(System.Collections.Generic.LinkedList{System.Double})">
             <summary>
             4.7	Create a method called “SelectionSort” which has a single input parameter of type LinkedList, 

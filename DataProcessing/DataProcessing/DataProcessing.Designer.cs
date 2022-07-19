@@ -91,6 +91,7 @@
             this.listBoxA.FormattingEnabled = true;
             this.listBoxA.Location = new System.Drawing.Point(335, 63);
             this.listBoxA.Name = "listBoxA";
+            this.listBoxA.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxA.Size = new System.Drawing.Size(101, 329);
             this.listBoxA.TabIndex = 1;
             // 
@@ -99,6 +100,7 @@
             this.listBoxB.FormattingEnabled = true;
             this.listBoxB.Location = new System.Drawing.Point(549, 63);
             this.listBoxB.Name = "listBoxB";
+            this.listBoxB.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxB.Size = new System.Drawing.Size(101, 329);
             this.listBoxB.TabIndex = 2;
             // 

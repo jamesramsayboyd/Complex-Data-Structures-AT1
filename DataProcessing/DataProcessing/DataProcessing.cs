@@ -44,8 +44,8 @@ namespace DataProcessing
             sensorB.Clear();
             for (int i = 0; i < maxDataSize; i++)
             {
-                sensorA.AddLast(readData.SensorA(mu:i, sigma:i));
-                sensorB.AddLast(readData.SensorB(mu:i, sigma:i));
+                sensorA.AddLast(readData.SensorA((double)numericUpDownMu.Value, (double)numericUpDownSigma.Value));
+                sensorB.AddLast(readData.SensorB((double)numericUpDownMu.Value, (double)numericUpDownSigma.Value));
             }
         }
 
@@ -101,6 +101,21 @@ namespace DataProcessing
             foreach (var datum in list)
             {
                 listBoxName.Items.Add(datum);
+            }
+        }
+
+        /// <summary>
+        /// A method that highlights a range of ListBox Items +-2 from the given index
+        /// </summary>
+        /// <param name="listBoxName"></param>
+        /// <param name="index"></param>
+        private void SelectListBoxRange (ListBox listBoxName, int index)
+        {
+            listBoxName.SelectedItems.Clear();
+            listBoxName.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            for (int i = index - 2; i <= index + 2; i++)
+            {
+                listBoxName.SetSelected(i, true);
             }
         }
 
@@ -247,22 +262,26 @@ namespace DataProcessing
         /// <param name="e"></param>
         private void buttonBinaryIterativeA_Click(object sender, EventArgs e)
         {
-
+            int index = BinarySearchIterative(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
+            SelectListBoxRange(listBoxA, index);
         }
 
         private void buttonBinaryRecursiveA_Click(object sender, EventArgs e)
         {
-
+            int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
+            SelectListBoxRange(listBoxA, index);
         }
 
         private void buttonBinaryIterativeB_Click(object sender, EventArgs e)
         {
-
+            int index = BinarySearchIterative(sensorB, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
+            SelectListBoxRange(listBoxB, index);
         }
 
         private void buttonBinaryRecursiveB_Click(object sender, EventArgs e)
         {
-
+            int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
+            SelectListBoxRange(listBoxB, index);
         }
 
         /// <summary>
