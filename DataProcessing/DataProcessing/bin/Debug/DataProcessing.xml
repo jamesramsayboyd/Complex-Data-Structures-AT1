@@ -53,6 +53,18 @@
             <param name="listBoxName"></param>
             <param name="index"></param>
         </member>
+        <member name="M:DataProcessing.DataProcessing.textBoxSearchA_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Code to ensure only numbers can be entered in the Search Target textboxes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.ClearTextBoxes">
+            <summary>
+            A method to clear all TextBoxes
+            </summary>
+        </member>
         <member name="M:DataProcessing.DataProcessing.SelectionSort(System.Collections.Generic.LinkedList{System.Double})">
             <summary>
             4.7	Create a method called “SelectionSort” which has a single input parameter of type LinkedList, 
@@ -66,6 +78,16 @@
             4.8	Create a method called “InsertionSort” which has a single parameter of type LinkedList, 
             while the calling code argument is the linkedlist name. 
             </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.TimeSortFunction(System.Func{System.Collections.Generic.LinkedList{System.Double},System.Boolean},System.Collections.Generic.LinkedList{System.Double})">
+            <summary>
+            A method that takes one of the Sort methods as a parameter using the Func delegate
+            and times the duration of the operation, returning the time in milliseconds formatted to 
+            a string
+            </summary>
+            <param name="function"></param>
             <param name="list"></param>
             <returns></returns>
         </member>

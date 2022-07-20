@@ -244,6 +244,7 @@
             this.textBoxSearchA.Name = "textBoxSearchA";
             this.textBoxSearchA.Size = new System.Drawing.Size(88, 20);
             this.textBoxSearchA.TabIndex = 14;
+            this.textBoxSearchA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearchA_KeyPress);
             // 
             // textBoxSearchB
             // 
@@ -251,6 +252,7 @@
             this.textBoxSearchB.Name = "textBoxSearchB";
             this.textBoxSearchB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSearchB.TabIndex = 15;
+            this.textBoxSearchB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearchB_KeyPress);
             // 
             // label1
             // 
@@ -274,6 +276,7 @@
             // 
             this.textBoxIterativeA.Location = new System.Drawing.Point(224, 140);
             this.textBoxIterativeA.Name = "textBoxIterativeA";
+            this.textBoxIterativeA.ReadOnly = true;
             this.textBoxIterativeA.Size = new System.Drawing.Size(88, 20);
             this.textBoxIterativeA.TabIndex = 18;
             // 
@@ -281,6 +284,7 @@
             // 
             this.textBoxRecursiveA.Location = new System.Drawing.Point(224, 218);
             this.textBoxRecursiveA.Name = "textBoxRecursiveA";
+            this.textBoxRecursiveA.ReadOnly = true;
             this.textBoxRecursiveA.Size = new System.Drawing.Size(100, 20);
             this.textBoxRecursiveA.TabIndex = 19;
             // 
@@ -288,6 +292,7 @@
             // 
             this.textBoxSelectionA.Location = new System.Drawing.Point(224, 297);
             this.textBoxSelectionA.Name = "textBoxSelectionA";
+            this.textBoxSelectionA.ReadOnly = true;
             this.textBoxSelectionA.Size = new System.Drawing.Size(100, 20);
             this.textBoxSelectionA.TabIndex = 20;
             // 
@@ -295,6 +300,7 @@
             // 
             this.textBoxInsertionA.Location = new System.Drawing.Point(224, 369);
             this.textBoxInsertionA.Name = "textBoxInsertionA";
+            this.textBoxInsertionA.ReadOnly = true;
             this.textBoxInsertionA.Size = new System.Drawing.Size(100, 20);
             this.textBoxInsertionA.TabIndex = 21;
             // 
@@ -302,6 +308,7 @@
             // 
             this.textBoxIterativeB.Location = new System.Drawing.Point(452, 140);
             this.textBoxIterativeB.Name = "textBoxIterativeB";
+            this.textBoxIterativeB.ReadOnly = true;
             this.textBoxIterativeB.Size = new System.Drawing.Size(85, 20);
             this.textBoxIterativeB.TabIndex = 22;
             // 
@@ -309,6 +316,7 @@
             // 
             this.textBoxRecursiveB.Location = new System.Drawing.Point(452, 218);
             this.textBoxRecursiveB.Name = "textBoxRecursiveB";
+            this.textBoxRecursiveB.ReadOnly = true;
             this.textBoxRecursiveB.Size = new System.Drawing.Size(82, 20);
             this.textBoxRecursiveB.TabIndex = 23;
             // 
@@ -316,6 +324,7 @@
             // 
             this.textBoxSelectionB.Location = new System.Drawing.Point(449, 297);
             this.textBoxSelectionB.Name = "textBoxSelectionB";
+            this.textBoxSelectionB.ReadOnly = true;
             this.textBoxSelectionB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSelectionB.TabIndex = 24;
             // 
@@ -323,6 +332,7 @@
             // 
             this.textBoxInsertionB.Location = new System.Drawing.Point(449, 369);
             this.textBoxInsertionB.Name = "textBoxInsertionB";
+            this.textBoxInsertionB.ReadOnly = true;
             this.textBoxInsertionB.Size = new System.Drawing.Size(85, 20);
             this.textBoxInsertionB.TabIndex = 25;
             // 

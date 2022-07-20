@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Galileo; // Importing Galileo.dll
+using System.Diagnostics;
 
 // James Boyd 30041547
 // Cluster - Complex Data Structures Assessment 1
@@ -72,6 +73,7 @@ namespace DataProcessing
         private void buttonLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            ClearTextBoxes();
             ShowAllSensorData();
             DisplayListBoxData(sensorA, listBoxA);
             DisplayListBoxData(sensorB, listBoxB);
@@ -125,6 +127,38 @@ namespace DataProcessing
                 }
                 listBoxName.SetSelected(i, true);
             }
+        }
+
+        /// <summary>
+        /// Code to ensure only numbers can be entered in the Search Target textboxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBoxSearchA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void textBoxSearchB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        /// <summary>
+        /// A method to clear all TextBoxes
+        /// </summary>
+        private void ClearTextBoxes()
+        {
+            textBoxInsertionA.Clear();
+            textBoxInsertionB.Clear();
+            textBoxIterativeA.Clear();
+            textBoxIterativeB.Clear();
+            textBoxRecursiveA.Clear();
+            textBoxRecursiveB.Clear();
+            textBoxSelectionA.Clear();
+            textBoxSelectionB.Clear();
         }
 
         #endregion UTILITIES
@@ -185,6 +219,24 @@ namespace DataProcessing
                 }
             }
             return true;
+        }
+
+        /// <summary>
+        /// A method that takes one of the Sort methods as a parameter using the Func delegate
+        /// and times the duration of the operation, returning the time in milliseconds formatted to 
+        /// a string
+        /// </summary>
+        /// <param name="function"></param>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        private string TimeSortFunction(Func<LinkedList<double>, Boolean> function, LinkedList<double> list)
+        {
+            Stopwatch st = new Stopwatch();
+            st.Start();
+            function(list);
+            st.Stop();
+            TimeSpan ts = st.Elapsed;
+            return ts.Milliseconds.ToString() + " milliseconds";
         }
         #endregion SORT METHODS
 
@@ -292,7 +344,7 @@ namespace DataProcessing
         private void buttonBinaryRecursiveB_Click(object sender, EventArgs e)
         {
             textBoxRecursiveB.Clear();
-            int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorA));
+            int index = BinarySearchRecursive(sensorB, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
             SelectListBoxRange(listBoxB, index);
             textBoxRecursiveB.Text = "time taken";
         }
@@ -307,35 +359,35 @@ namespace DataProcessing
         /// <param name="e"></param>
         private void buttonSelectionSortA_Click(object sender, EventArgs e)
         {
-            SelectionSort(sensorA);
+            textBoxSelectionA.Clear();
+            textBoxSelectionA.Text = TimeSortFunction(SelectionSort, sensorA);
+            ShowAllSensorData();
             DisplayListBoxData(sensorA, listBoxA);
-            textBoxSelectionA.Text = "time taken";
         }
 
         private void buttonInsertionSortA_Click(object sender, EventArgs e)
         {
-            InsertionSort(sensorA);
+            textBoxInsertionA.Clear();
+            textBoxInsertionA.Text = TimeSortFunction(InsertionSort, sensorA);
+            ShowAllSensorData();
             DisplayListBoxData(sensorA, listBoxA);
-            textBoxInsertionA.Text = "time taken";
         }
 
         private void buttonSelectionSortB_Click(object sender, EventArgs e)
         {
-            SelectionSort(sensorB);
+            textBoxSelectionB.Clear();
+            textBoxSelectionB.Text = TimeSortFunction(SelectionSort, sensorB);
+            ShowAllSensorData();
             DisplayListBoxData(sensorB, listBoxB);
-            textBoxSelectionB.Text = "time taken";
         }
 
         private void buttonInsertionSortB_Click(object sender, EventArgs e)
         {
-            InsertionSort(sensorB);
+            textBoxInsertionB.Clear();
+            textBoxInsertionB.Text = TimeSortFunction(InsertionSort, sensorB);
+            ShowAllSensorData();
             DisplayListBoxData(sensorB, listBoxB);
-            textBoxInsertionB.Text = "time taken";
         }
-
-
-
         #endregion UI BUTTON METHODS
-
     }
 }
