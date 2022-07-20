@@ -291,7 +291,8 @@ namespace DataProcessing
 
         private void buttonBinaryRecursiveB_Click(object sender, EventArgs e)
         {
-            int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
+            textBoxRecursiveB.Clear();
+            int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorA));
             SelectListBoxRange(listBoxB, index);
             textBoxRecursiveB.Text = "time taken";
         }
