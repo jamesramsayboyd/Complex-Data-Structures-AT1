@@ -24,6 +24,7 @@ namespace DataProcessing
         {
             InitializeComponent();
             ToolStripMessage(0);
+            SetToolTips();
         }
 
         /// <summary>
@@ -553,6 +554,32 @@ namespace DataProcessing
                 default:
                     break;
             }
+        }
+
+        private void SetToolTips()
+        {
+            toolTip.SetToolTip(numericUpDownSigma, "The standard definition value for the data");
+            toolTip.SetToolTip(numericUpDownMu, "The mean value for the data");
+            toolTip.SetToolTip(buttonLoad, "Load satellite data from Sensors A and B");
+            toolTip.SetToolTip(textBoxSearchA, "Enter a number");
+            toolTip.SetToolTip(textBoxSearchB, "Enter a number");
+            toolTip.SetToolTip(buttonBinaryIterativeA, "Find the entered search target using an iterative Binary Search algorithm");
+            toolTip.SetToolTip(buttonBinaryIterativeB, "Find the entered search target using an iterative Binary Search algorithm");
+            toolTip.SetToolTip(buttonBinaryRecursiveA, "Find the entered search target using a recursive Binary Search algorithm");
+            toolTip.SetToolTip(buttonBinaryRecursiveB, "Find the entered search target using a recursive Binary Search algorithm");
+            toolTip.SetToolTip(textBoxIterativeA, "The time taken for the iterative Binary Search operation (in ticks)");
+            toolTip.SetToolTip(textBoxIterativeB, "The time taken for the iterative Binary Search operation (in ticks)");
+            toolTip.SetToolTip(textBoxRecursiveA, "The time taken for the recursive Binary Search operation (in ticks)");
+            toolTip.SetToolTip(textBoxRecursiveB, "The time taken for the recursive Binary Search operation (in ticks)");
+            toolTip.SetToolTip(buttonSelectionSortA, "Sort the data using a Selection Sort algorithm");
+            toolTip.SetToolTip(buttonSelectionSortB, "Sort the data using a Selection Sort algorithm");
+            toolTip.SetToolTip(buttonInsertionSortA, "Sort the data using a Insertion Sort algorithm");
+            toolTip.SetToolTip(buttonInsertionSortB, "Sort the data using a Insertion Sort algorithm");
+            toolTip.SetToolTip(textBoxSelectionA, "The time taken for the Selection Sort operation (in milliseconds)");
+            toolTip.SetToolTip(textBoxSelectionB, "The time taken for the Selection Sort operation (in milliseconds)");
+            toolTip.SetToolTip(textBoxInsertionA, "The time taken for the Insertion Sort operation (in milliseconds)");
+            toolTip.SetToolTip(textBoxInsertionB, "The time taken for the Insertion Sort operation (in milliseconds)");
+
         }
         #endregion USER MESSAGING
     }
