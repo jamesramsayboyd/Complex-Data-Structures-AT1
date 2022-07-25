@@ -23,6 +23,7 @@ namespace DataProcessing
         public DataProcessing()
         {
             InitializeComponent();
+            ToolStripMessage(0);
         }
 
         /// <summary>
@@ -73,10 +74,12 @@ namespace DataProcessing
         private void buttonLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            EnableControls();
             ClearTextBoxes();
             ShowAllSensorData();
             DisplayListBoxData(sensorA, listBoxA);
             DisplayListBoxData(sensorB, listBoxB);
+            ToolStripMessage(1);
         }
 
         #region UTILITIES
@@ -161,6 +164,24 @@ namespace DataProcessing
             textBoxSelectionB.Clear();
         }
 
+        /// <summary>
+        /// Buttons and textboxes are marked Enabled = false by default for error trapping purposes
+        /// and only enabled once data has been loaded
+        /// </summary>
+        private void EnableControls()
+        {
+            textBoxSearchA.Enabled = true;
+            buttonBinaryIterativeA.Enabled = true;
+            buttonBinaryRecursiveA.Enabled = true;
+            buttonSelectionSortA.Enabled = true;
+            buttonInsertionSortA.Enabled = true;
+            textBoxSearchB.Enabled = true;
+            buttonBinaryIterativeB.Enabled = true;
+            buttonBinaryRecursiveB.Enabled = true;
+            buttonSelectionSortB.Enabled = true;
+            buttonInsertionSortB.Enabled = true;
+        }
+
         #endregion UTILITIES
 
         #region SORT METHODS
@@ -221,6 +242,7 @@ namespace DataProcessing
             return true;
         }
 
+        // Not used
         /// <summary>
         /// A method that takes one of the Sort methods as a parameter using the Func delegate
         /// and times the duration of the operation, returning the time in milliseconds formatted to 
@@ -308,6 +330,30 @@ namespace DataProcessing
             }
             return minimum;
         }
+
+        /// <summary>
+        /// A method that takes a Sort method as a parameter and times the duration taken, returning a Tuple
+        /// containing the index returned by the sort method as Item 1 and a formatted string of the number 
+        /// of ticks as Item 2
+        /// </summary>
+        /// <param name="function"></param>
+        /// <param name="list"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        private Tuple<int, string> TimeSearchFunction(Func<LinkedList<double>, int, int, int, int> function, LinkedList<double> list, int a, int b, int c)
+        {
+            int index;
+            string tickCount;
+            Stopwatch st = new Stopwatch();
+            st.Start();
+            index = function(list, a, b, c);
+            st.Stop();
+            TimeSpan ts = st.Elapsed;
+            tickCount = ts.Ticks.ToString() + " ticks";
+            return new Tuple<int, string>(index, tickCount);
+        }
         #endregion SEARCH METHODS
 
         #region UI BUTTON METHODS
@@ -322,31 +368,102 @@ namespace DataProcessing
         /// <param name="e"></param>
         private void buttonBinaryIterativeA_Click(object sender, EventArgs e)
         {
-            int index = BinarySearchIterative(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
-            SelectListBoxRange(listBoxA, index);
-            textBoxIterativeA.Text = "time taken";
+            if (!string.IsNullOrEmpty(textBoxSearchA.Text))
+            {
+                if (sensorA.First.Value == sensorA.Min()) // Tests whether LinkedList is sorted
+                {
+                    var stopwatch = Stopwatch.StartNew();
+                    int index = BinarySearchIterative(sensorA, int.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
+                    stopwatch.Stop();
+                    TimeSpan ts = stopwatch.Elapsed;
+                    SelectListBoxRange(listBoxA, index);
+                    textBoxIterativeA.Text = ts.Ticks.ToString() + " ticks";
+                    ToolStripMessage(5);
+                }
+                else
+                {
+                    ToolStripMessage(2);
+                }
+            }
+            else
+            {
+                ToolStripMessage(3);
+            }
         }
 
         private void buttonBinaryRecursiveA_Click(object sender, EventArgs e)
         {
-            int index = BinarySearchRecursive(sensorA, Int32.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
-            SelectListBoxRange(listBoxA, index);
-            textBoxRecursiveA.Text = "time taken";
+            if (!string.IsNullOrEmpty(textBoxSearchA.Text))
+            {
+                if (sensorA.First.Value == sensorA.Min()) // Tests whether LinkedList is sorted
+                {
+                    var stopwatch = Stopwatch.StartNew();
+                    int index = BinarySearchRecursive(sensorA, int.Parse(textBoxSearchA.Text), 0, NumberOfNodes(sensorA));
+                    stopwatch.Stop();
+                    TimeSpan ts = stopwatch.Elapsed;
+                    SelectListBoxRange(listBoxA, index);
+                    textBoxRecursiveA.Text = ts.Ticks.ToString() + " ticks";
+                    ToolStripMessage(5);
+                }
+                else
+                {
+                    ToolStripMessage(2);
+                }
+            }
+            else
+            {
+                ToolStripMessage(3);
+            }
         }
 
         private void buttonBinaryIterativeB_Click(object sender, EventArgs e)
         {
-            int index = BinarySearchIterative(sensorB, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
-            SelectListBoxRange(listBoxB, index);
-            textBoxIterativeB.Text = "time taken";
+            if (!string.IsNullOrEmpty(textBoxSearchB.Text))
+            {
+                if (sensorB.First.Value == sensorB.Min()) // Tests whether LinkedList is sorted
+                {
+                    var stopwatch = Stopwatch.StartNew();
+                    int index = BinarySearchIterative(sensorB, int.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
+                    stopwatch.Stop();
+                    TimeSpan ts = stopwatch.Elapsed;
+                    SelectListBoxRange(listBoxB, index);
+                    textBoxIterativeB.Text = ts.Ticks.ToString() + " ticks";
+                    ToolStripMessage(5);
+                }
+                else
+                {
+                    ToolStripMessage(2);
+                }
+            }
+            else
+            {
+                ToolStripMessage(3);
+            }
         }
 
         private void buttonBinaryRecursiveB_Click(object sender, EventArgs e)
         {
-            textBoxRecursiveB.Clear();
-            int index = BinarySearchRecursive(sensorB, Int32.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
-            SelectListBoxRange(listBoxB, index);
-            textBoxRecursiveB.Text = "time taken";
+            if (!string.IsNullOrEmpty(textBoxSearchB.Text))
+            {
+                if (sensorB.First.Value == sensorB.Min()) // Tests whether LinkedList is sorted
+                {
+                    var stopwatch = Stopwatch.StartNew();
+                    int index = BinarySearchRecursive(sensorB, int.Parse(textBoxSearchB.Text), 0, NumberOfNodes(sensorB));
+                    stopwatch.Stop();
+                    TimeSpan ts = stopwatch.Elapsed;
+                    SelectListBoxRange(listBoxB, index);
+                    textBoxRecursiveB.Text = ts.Ticks.ToString() + " ticks";
+                    ToolStripMessage(5);
+                }
+                else
+                {
+                    ToolStripMessage(2);
+                }
+            }
+            else
+            {
+                ToolStripMessage(3);
+            }
         }
 
         /// <summary>
@@ -360,34 +477,83 @@ namespace DataProcessing
         private void buttonSelectionSortA_Click(object sender, EventArgs e)
         {
             textBoxSelectionA.Clear();
-            textBoxSelectionA.Text = TimeSortFunction(SelectionSort, sensorA);
+            var stopwatch = Stopwatch.StartNew();
+            SelectionSort(sensorA);
+            stopwatch.Stop();
+            TimeSpan ts = stopwatch.Elapsed;
             ShowAllSensorData();
             DisplayListBoxData(sensorA, listBoxA);
+            textBoxSelectionA.Text = ts.Milliseconds.ToString() + " milliseconds";
+            ToolStripMessage(4);
         }
 
         private void buttonInsertionSortA_Click(object sender, EventArgs e)
         {
             textBoxInsertionA.Clear();
-            textBoxInsertionA.Text = TimeSortFunction(InsertionSort, sensorA);
+            var stopwatch = Stopwatch.StartNew();
+            InsertionSort(sensorA);
+            stopwatch.Stop();
+            TimeSpan ts = stopwatch.Elapsed;
             ShowAllSensorData();
             DisplayListBoxData(sensorA, listBoxA);
+            textBoxInsertionA.Text = ts.Milliseconds.ToString() + " milliseconds";
+            ToolStripMessage(4);
         }
 
         private void buttonSelectionSortB_Click(object sender, EventArgs e)
         {
             textBoxSelectionB.Clear();
-            textBoxSelectionB.Text = TimeSortFunction(SelectionSort, sensorB);
+            var stopwatch = Stopwatch.StartNew();
+            SelectionSort(sensorB);
+            stopwatch.Stop();
+            TimeSpan ts = stopwatch.Elapsed;
             ShowAllSensorData();
             DisplayListBoxData(sensorB, listBoxB);
+            textBoxSelectionB.Text = ts.Milliseconds.ToString() + " milliseconds";
+            ToolStripMessage(4);
         }
 
         private void buttonInsertionSortB_Click(object sender, EventArgs e)
         {
             textBoxInsertionB.Clear();
-            textBoxInsertionB.Text = TimeSortFunction(InsertionSort, sensorB);
+            var stopwatch = Stopwatch.StartNew();
+            InsertionSort(sensorB);
+            stopwatch.Stop();
+            TimeSpan ts = stopwatch.Elapsed;
             ShowAllSensorData();
             DisplayListBoxData(sensorB, listBoxB);
+            textBoxInsertionB.Text = ts.Milliseconds.ToString() + " milliseconds";
+            ToolStripMessage(4);
         }
         #endregion UI BUTTON METHODS
+
+        #region USER MESSAGING
+        private void ToolStripMessage (int number)
+        {
+            switch (number)
+            {
+                case 0:
+                    toolStripStatusLabel.Text = "Set Sigma(standard definition) and Mu(mean) values and click 'Load Sensor Data' to begin";
+                    break;
+                case 1:
+                    toolStripStatusLabel.Text = "Data loaded";
+                    break;
+                case 2:
+                    toolStripStatusLabel.Text = "Data must be sorted before searching";
+                    break;
+                case 3:
+                    toolStripStatusLabel.Text = "Enter a search target";
+                    break;
+                case 4:
+                    toolStripStatusLabel.Text = "Data sorted";
+                    break;
+                case 5:
+                    toolStripStatusLabel.Text = "Search target highlighted";
+                    break;
+                default:
+                    break;
+            }
+        }
+        #endregion USER MESSAGING
     }
 }

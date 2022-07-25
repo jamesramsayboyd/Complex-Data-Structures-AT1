@@ -59,8 +59,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).BeginInit();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView
@@ -89,7 +92,7 @@
             // listBoxA
             // 
             this.listBoxA.FormattingEnabled = true;
-            this.listBoxA.Location = new System.Drawing.Point(335, 63);
+            this.listBoxA.Location = new System.Drawing.Point(312, 63);
             this.listBoxA.Name = "listBoxA";
             this.listBoxA.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxA.Size = new System.Drawing.Size(101, 329);
@@ -98,7 +101,7 @@
             // listBoxB
             // 
             this.listBoxB.FormattingEnabled = true;
-            this.listBoxB.Location = new System.Drawing.Point(549, 63);
+            this.listBoxB.Location = new System.Drawing.Point(529, 63);
             this.listBoxB.Name = "listBoxB";
             this.listBoxB.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxB.Size = new System.Drawing.Size(101, 329);
@@ -116,7 +119,8 @@
             // 
             // buttonBinaryIterativeA
             // 
-            this.buttonBinaryIterativeA.Location = new System.Drawing.Point(224, 93);
+            this.buttonBinaryIterativeA.Enabled = false;
+            this.buttonBinaryIterativeA.Location = new System.Drawing.Point(207, 93);
             this.buttonBinaryIterativeA.Name = "buttonBinaryIterativeA";
             this.buttonBinaryIterativeA.Size = new System.Drawing.Size(88, 37);
             this.buttonBinaryIterativeA.TabIndex = 4;
@@ -126,7 +130,8 @@
             // 
             // buttonBinaryRecursiveA
             // 
-            this.buttonBinaryRecursiveA.Location = new System.Drawing.Point(224, 170);
+            this.buttonBinaryRecursiveA.Enabled = false;
+            this.buttonBinaryRecursiveA.Location = new System.Drawing.Point(207, 170);
             this.buttonBinaryRecursiveA.Name = "buttonBinaryRecursiveA";
             this.buttonBinaryRecursiveA.Size = new System.Drawing.Size(88, 38);
             this.buttonBinaryRecursiveA.TabIndex = 5;
@@ -136,7 +141,8 @@
             // 
             // buttonSelectionSortA
             // 
-            this.buttonSelectionSortA.Location = new System.Drawing.Point(224, 248);
+            this.buttonSelectionSortA.Enabled = false;
+            this.buttonSelectionSortA.Location = new System.Drawing.Point(207, 248);
             this.buttonSelectionSortA.Name = "buttonSelectionSortA";
             this.buttonSelectionSortA.Size = new System.Drawing.Size(88, 39);
             this.buttonSelectionSortA.TabIndex = 6;
@@ -146,7 +152,8 @@
             // 
             // buttonInsertionSortA
             // 
-            this.buttonInsertionSortA.Location = new System.Drawing.Point(224, 327);
+            this.buttonInsertionSortA.Enabled = false;
+            this.buttonInsertionSortA.Location = new System.Drawing.Point(207, 327);
             this.buttonInsertionSortA.Name = "buttonInsertionSortA";
             this.buttonInsertionSortA.Size = new System.Drawing.Size(88, 32);
             this.buttonInsertionSortA.TabIndex = 7;
@@ -156,7 +163,8 @@
             // 
             // buttonBinaryIterativeB
             // 
-            this.buttonBinaryIterativeB.Location = new System.Drawing.Point(452, 93);
+            this.buttonBinaryIterativeB.Enabled = false;
+            this.buttonBinaryIterativeB.Location = new System.Drawing.Point(429, 93);
             this.buttonBinaryIterativeB.Name = "buttonBinaryIterativeB";
             this.buttonBinaryIterativeB.Size = new System.Drawing.Size(85, 37);
             this.buttonBinaryIterativeB.TabIndex = 8;
@@ -166,7 +174,8 @@
             // 
             // buttonBinaryRecursiveB
             // 
-            this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(452, 170);
+            this.buttonBinaryRecursiveB.Enabled = false;
+            this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(429, 170);
             this.buttonBinaryRecursiveB.Name = "buttonBinaryRecursiveB";
             this.buttonBinaryRecursiveB.Size = new System.Drawing.Size(85, 38);
             this.buttonBinaryRecursiveB.TabIndex = 9;
@@ -176,7 +185,8 @@
             // 
             // buttonSelectionSortB
             // 
-            this.buttonSelectionSortB.Location = new System.Drawing.Point(449, 248);
+            this.buttonSelectionSortB.Enabled = false;
+            this.buttonSelectionSortB.Location = new System.Drawing.Point(429, 248);
             this.buttonSelectionSortB.Name = "buttonSelectionSortB";
             this.buttonSelectionSortB.Size = new System.Drawing.Size(85, 39);
             this.buttonSelectionSortB.TabIndex = 10;
@@ -186,7 +196,8 @@
             // 
             // buttonInsertionSortB
             // 
-            this.buttonInsertionSortB.Location = new System.Drawing.Point(449, 327);
+            this.buttonInsertionSortB.Enabled = false;
+            this.buttonInsertionSortB.Location = new System.Drawing.Point(429, 327);
             this.buttonInsertionSortB.Name = "buttonInsertionSortB";
             this.buttonInsertionSortB.Size = new System.Drawing.Size(85, 32);
             this.buttonInsertionSortB.TabIndex = 11;
@@ -208,6 +219,7 @@
             0,
             0});
             this.numericUpDownSigma.Name = "numericUpDownSigma";
+            this.numericUpDownSigma.ReadOnly = true;
             this.numericUpDownSigma.Size = new System.Drawing.Size(47, 20);
             this.numericUpDownSigma.TabIndex = 12;
             this.numericUpDownSigma.Value = new decimal(new int[] {
@@ -230,6 +242,7 @@
             0,
             0});
             this.numericUpDownMu.Name = "numericUpDownMu";
+            this.numericUpDownMu.ReadOnly = true;
             this.numericUpDownMu.Size = new System.Drawing.Size(49, 20);
             this.numericUpDownMu.TabIndex = 13;
             this.numericUpDownMu.Value = new decimal(new int[] {
@@ -240,7 +253,8 @@
             // 
             // textBoxSearchA
             // 
-            this.textBoxSearchA.Location = new System.Drawing.Point(224, 63);
+            this.textBoxSearchA.Enabled = false;
+            this.textBoxSearchA.Location = new System.Drawing.Point(207, 63);
             this.textBoxSearchA.Name = "textBoxSearchA";
             this.textBoxSearchA.Size = new System.Drawing.Size(88, 20);
             this.textBoxSearchA.TabIndex = 14;
@@ -248,7 +262,8 @@
             // 
             // textBoxSearchB
             // 
-            this.textBoxSearchB.Location = new System.Drawing.Point(452, 63);
+            this.textBoxSearchB.Enabled = false;
+            this.textBoxSearchB.Location = new System.Drawing.Point(429, 63);
             this.textBoxSearchB.Name = "textBoxSearchB";
             this.textBoxSearchB.Size = new System.Drawing.Size(85, 20);
             this.textBoxSearchB.TabIndex = 15;
@@ -257,7 +272,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(221, 47);
+            this.label1.Location = new System.Drawing.Point(204, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 16;
@@ -266,7 +281,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(449, 47);
+            this.label2.Location = new System.Drawing.Point(426, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 17;
@@ -274,7 +289,7 @@
             // 
             // textBoxIterativeA
             // 
-            this.textBoxIterativeA.Location = new System.Drawing.Point(224, 140);
+            this.textBoxIterativeA.Location = new System.Drawing.Point(207, 140);
             this.textBoxIterativeA.Name = "textBoxIterativeA";
             this.textBoxIterativeA.ReadOnly = true;
             this.textBoxIterativeA.Size = new System.Drawing.Size(88, 20);
@@ -282,31 +297,31 @@
             // 
             // textBoxRecursiveA
             // 
-            this.textBoxRecursiveA.Location = new System.Drawing.Point(224, 218);
+            this.textBoxRecursiveA.Location = new System.Drawing.Point(207, 218);
             this.textBoxRecursiveA.Name = "textBoxRecursiveA";
             this.textBoxRecursiveA.ReadOnly = true;
-            this.textBoxRecursiveA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRecursiveA.Size = new System.Drawing.Size(88, 20);
             this.textBoxRecursiveA.TabIndex = 19;
             // 
             // textBoxSelectionA
             // 
-            this.textBoxSelectionA.Location = new System.Drawing.Point(224, 297);
+            this.textBoxSelectionA.Location = new System.Drawing.Point(207, 297);
             this.textBoxSelectionA.Name = "textBoxSelectionA";
             this.textBoxSelectionA.ReadOnly = true;
-            this.textBoxSelectionA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSelectionA.Size = new System.Drawing.Size(88, 20);
             this.textBoxSelectionA.TabIndex = 20;
             // 
             // textBoxInsertionA
             // 
-            this.textBoxInsertionA.Location = new System.Drawing.Point(224, 369);
+            this.textBoxInsertionA.Location = new System.Drawing.Point(207, 369);
             this.textBoxInsertionA.Name = "textBoxInsertionA";
             this.textBoxInsertionA.ReadOnly = true;
-            this.textBoxInsertionA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxInsertionA.Size = new System.Drawing.Size(88, 20);
             this.textBoxInsertionA.TabIndex = 21;
             // 
             // textBoxIterativeB
             // 
-            this.textBoxIterativeB.Location = new System.Drawing.Point(452, 140);
+            this.textBoxIterativeB.Location = new System.Drawing.Point(429, 140);
             this.textBoxIterativeB.Name = "textBoxIterativeB";
             this.textBoxIterativeB.ReadOnly = true;
             this.textBoxIterativeB.Size = new System.Drawing.Size(85, 20);
@@ -314,15 +329,15 @@
             // 
             // textBoxRecursiveB
             // 
-            this.textBoxRecursiveB.Location = new System.Drawing.Point(452, 218);
+            this.textBoxRecursiveB.Location = new System.Drawing.Point(429, 218);
             this.textBoxRecursiveB.Name = "textBoxRecursiveB";
             this.textBoxRecursiveB.ReadOnly = true;
-            this.textBoxRecursiveB.Size = new System.Drawing.Size(82, 20);
+            this.textBoxRecursiveB.Size = new System.Drawing.Size(85, 20);
             this.textBoxRecursiveB.TabIndex = 23;
             // 
             // textBoxSelectionB
             // 
-            this.textBoxSelectionB.Location = new System.Drawing.Point(449, 297);
+            this.textBoxSelectionB.Location = new System.Drawing.Point(429, 297);
             this.textBoxSelectionB.Name = "textBoxSelectionB";
             this.textBoxSelectionB.ReadOnly = true;
             this.textBoxSelectionB.Size = new System.Drawing.Size(85, 20);
@@ -330,7 +345,7 @@
             // 
             // textBoxInsertionB
             // 
-            this.textBoxInsertionB.Location = new System.Drawing.Point(449, 369);
+            this.textBoxInsertionB.Location = new System.Drawing.Point(429, 369);
             this.textBoxInsertionB.Name = "textBoxInsertionB";
             this.textBoxInsertionB.ReadOnly = true;
             this.textBoxInsertionB.Size = new System.Drawing.Size(85, 20);
@@ -363,11 +378,29 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "MSSS DATA PROCESSING";
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 408);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(654, 22);
+            this.statusStrip.TabIndex = 29;
+            this.statusStrip.Text = "-";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(488, 17);
+            this.toolStripStatusLabel.Text = "Set Sigma (standard definition) and Mu (mean) values and click \'Load Sensor Data\'" +
+    " to begin";
+            // 
             // DataProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 412);
+            this.ClientSize = new System.Drawing.Size(654, 430);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -401,6 +434,8 @@
             this.Text = "Data Processing";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).EndInit();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,6 +474,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
     }
 }
 

@@ -65,6 +65,12 @@
             A method to clear all TextBoxes
             </summary>
         </member>
+        <member name="M:DataProcessing.DataProcessing.EnableControls">
+            <summary>
+            Buttons and textboxes are marked Enabled = false by default for error trapping purposes
+            and only enabled once data has been loaded
+            </summary>
+        </member>
         <member name="M:DataProcessing.DataProcessing.SelectionSort(System.Collections.Generic.LinkedList{System.Double})">
             <summary>
             4.7	Create a method called “SelectionSort” which has a single input parameter of type LinkedList, 
@@ -115,6 +121,19 @@
             <param name="searchTarget"></param>
             <param name="minimumListSize"></param>
             <param name="numberOfNodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataProcessing.DataProcessing.TimeSearchFunction(System.Func{System.Collections.Generic.LinkedList{System.Double},System.Int32,System.Int32,System.Int32,System.Int32},System.Collections.Generic.LinkedList{System.Double},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            A method that takes a Sort method as a parameter and times the duration taken, returning a Tuple
+            containing the index returned by the sort method as Item 1 and a formatted string of the number 
+            of ticks as Item 2
+            </summary>
+            <param name="function"></param>
+            <param name="list"></param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
             <returns></returns>
         </member>
         <member name="M:DataProcessing.DataProcessing.buttonBinaryIterativeA_Click(System.Object,System.EventArgs)">
