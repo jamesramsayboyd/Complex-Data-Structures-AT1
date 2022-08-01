@@ -1,16 +1,7 @@
 *** Debug Output for MSSS Data Processing application ***
 
 New data set loaded: sigma = 10, mu = 50
-
-New data set loaded: sigma = 15, mu = 65
-*Sensor A* Selection Sort time: 193 milliseconds
-*Sensor A* Insertion Sort time: 112 milliseconds
-*Sensor B* Selection Sort time: 188 milliseconds
-*Sensor B* Insertion Sort time: 110 milliseconds
-*Sensor A, search target 12* Binary Search time (Iterative): 1738 ticks
-*Sensor B, search target 50* Binary Search time (Recursive): 1970 ticks
-*Sensor B, search target 120* Binary Search time (Recursive): 391 ticks
-*Sensor A, search target 120* Binary Search time (Iterative): 390 ticks
-*Sensor B, search target 120* Binary Search time (Recursive): 397 ticks
-*Sensor B, search target 50* Binary Search time (Recursive): 98 ticks
-*Sensor B, search target 0* Binary Search time (Iterative): 72 ticks
+*Sensor A* Selection Sort time: 183 milliseconds
+*Sensor B* Insertion Sort time: 250 milliseconds
+*Sensor A, search target 30* Binary Search time (Iterative): 1748 ticks
+*Sensor B, search target 45* Binary Search time (Recursive): 1981 ticks
