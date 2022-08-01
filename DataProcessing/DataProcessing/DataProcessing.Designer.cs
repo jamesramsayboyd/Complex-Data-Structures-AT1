@@ -63,6 +63,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).BeginInit();
             this.statusStrip.SuspendLayout();
@@ -106,7 +108,7 @@
             // 
             this.listBoxB.Enabled = false;
             this.listBoxB.FormattingEnabled = true;
-            this.listBoxB.Location = new System.Drawing.Point(529, 63);
+            this.listBoxB.Location = new System.Drawing.Point(532, 62);
             this.listBoxB.Name = "listBoxB";
             this.listBoxB.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxB.Size = new System.Drawing.Size(101, 329);
@@ -116,7 +118,7 @@
             // 
             this.buttonLoad.Location = new System.Drawing.Point(24, 89);
             this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(121, 23);
+            this.buttonLoad.Size = new System.Drawing.Size(165, 23);
             this.buttonLoad.TabIndex = 3;
             this.buttonLoad.Text = "Load Sensor Data";
             this.buttonLoad.UseVisualStyleBackColor = true;
@@ -171,7 +173,7 @@
             this.buttonBinaryIterativeB.Enabled = false;
             this.buttonBinaryIterativeB.Location = new System.Drawing.Point(429, 93);
             this.buttonBinaryIterativeB.Name = "buttonBinaryIterativeB";
-            this.buttonBinaryIterativeB.Size = new System.Drawing.Size(85, 37);
+            this.buttonBinaryIterativeB.Size = new System.Drawing.Size(88, 37);
             this.buttonBinaryIterativeB.TabIndex = 8;
             this.buttonBinaryIterativeB.Text = "Binary Search (Iterative)";
             this.buttonBinaryIterativeB.UseVisualStyleBackColor = true;
@@ -182,7 +184,7 @@
             this.buttonBinaryRecursiveB.Enabled = false;
             this.buttonBinaryRecursiveB.Location = new System.Drawing.Point(429, 170);
             this.buttonBinaryRecursiveB.Name = "buttonBinaryRecursiveB";
-            this.buttonBinaryRecursiveB.Size = new System.Drawing.Size(85, 38);
+            this.buttonBinaryRecursiveB.Size = new System.Drawing.Size(88, 38);
             this.buttonBinaryRecursiveB.TabIndex = 9;
             this.buttonBinaryRecursiveB.Text = "Binary Search (Recursive)";
             this.buttonBinaryRecursiveB.UseVisualStyleBackColor = true;
@@ -193,7 +195,7 @@
             this.buttonSelectionSortB.Enabled = false;
             this.buttonSelectionSortB.Location = new System.Drawing.Point(429, 248);
             this.buttonSelectionSortB.Name = "buttonSelectionSortB";
-            this.buttonSelectionSortB.Size = new System.Drawing.Size(85, 39);
+            this.buttonSelectionSortB.Size = new System.Drawing.Size(88, 39);
             this.buttonSelectionSortB.TabIndex = 10;
             this.buttonSelectionSortB.Text = "Sort (Selection)";
             this.buttonSelectionSortB.UseVisualStyleBackColor = true;
@@ -204,7 +206,7 @@
             this.buttonInsertionSortB.Enabled = false;
             this.buttonInsertionSortB.Location = new System.Drawing.Point(429, 327);
             this.buttonInsertionSortB.Name = "buttonInsertionSortB";
-            this.buttonInsertionSortB.Size = new System.Drawing.Size(85, 32);
+            this.buttonInsertionSortB.Size = new System.Drawing.Size(88, 32);
             this.buttonInsertionSortB.TabIndex = 11;
             this.buttonInsertionSortB.Text = "Sort (Insertion)";
             this.buttonInsertionSortB.UseVisualStyleBackColor = true;
@@ -225,7 +227,7 @@
             0});
             this.numericUpDownSigma.Name = "numericUpDownSigma";
             this.numericUpDownSigma.ReadOnly = true;
-            this.numericUpDownSigma.Size = new System.Drawing.Size(47, 20);
+            this.numericUpDownSigma.Size = new System.Drawing.Size(77, 20);
             this.numericUpDownSigma.TabIndex = 12;
             this.numericUpDownSigma.Value = new decimal(new int[] {
             10,
@@ -235,7 +237,7 @@
             // 
             // numericUpDownMu
             // 
-            this.numericUpDownMu.Location = new System.Drawing.Point(96, 63);
+            this.numericUpDownMu.Location = new System.Drawing.Point(112, 63);
             this.numericUpDownMu.Maximum = new decimal(new int[] {
             75,
             0,
@@ -248,7 +250,7 @@
             0});
             this.numericUpDownMu.Name = "numericUpDownMu";
             this.numericUpDownMu.ReadOnly = true;
-            this.numericUpDownMu.Size = new System.Drawing.Size(49, 20);
+            this.numericUpDownMu.Size = new System.Drawing.Size(77, 20);
             this.numericUpDownMu.TabIndex = 13;
             this.numericUpDownMu.Value = new decimal(new int[] {
             50,
@@ -270,7 +272,7 @@
             this.textBoxSearchB.Enabled = false;
             this.textBoxSearchB.Location = new System.Drawing.Point(429, 63);
             this.textBoxSearchB.Name = "textBoxSearchB";
-            this.textBoxSearchB.Size = new System.Drawing.Size(85, 20);
+            this.textBoxSearchB.Size = new System.Drawing.Size(88, 20);
             this.textBoxSearchB.TabIndex = 15;
             this.textBoxSearchB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearchB_KeyPress);
             // 
@@ -334,7 +336,7 @@
             this.textBoxIterativeB.Location = new System.Drawing.Point(429, 140);
             this.textBoxIterativeB.Name = "textBoxIterativeB";
             this.textBoxIterativeB.ReadOnly = true;
-            this.textBoxIterativeB.Size = new System.Drawing.Size(85, 20);
+            this.textBoxIterativeB.Size = new System.Drawing.Size(88, 20);
             this.textBoxIterativeB.TabIndex = 22;
             // 
             // textBoxRecursiveB
@@ -343,7 +345,7 @@
             this.textBoxRecursiveB.Location = new System.Drawing.Point(429, 218);
             this.textBoxRecursiveB.Name = "textBoxRecursiveB";
             this.textBoxRecursiveB.ReadOnly = true;
-            this.textBoxRecursiveB.Size = new System.Drawing.Size(85, 20);
+            this.textBoxRecursiveB.Size = new System.Drawing.Size(88, 20);
             this.textBoxRecursiveB.TabIndex = 23;
             // 
             // textBoxSelectionB
@@ -352,7 +354,7 @@
             this.textBoxSelectionB.Location = new System.Drawing.Point(429, 297);
             this.textBoxSelectionB.Name = "textBoxSelectionB";
             this.textBoxSelectionB.ReadOnly = true;
-            this.textBoxSelectionB.Size = new System.Drawing.Size(85, 20);
+            this.textBoxSelectionB.Size = new System.Drawing.Size(88, 20);
             this.textBoxSelectionB.TabIndex = 24;
             // 
             // textBoxInsertionB
@@ -361,7 +363,7 @@
             this.textBoxInsertionB.Location = new System.Drawing.Point(429, 369);
             this.textBoxInsertionB.Name = "textBoxInsertionB";
             this.textBoxInsertionB.ReadOnly = true;
-            this.textBoxInsertionB.Size = new System.Drawing.Size(85, 20);
+            this.textBoxInsertionB.Size = new System.Drawing.Size(88, 20);
             this.textBoxInsertionB.TabIndex = 25;
             // 
             // label3
@@ -376,7 +378,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 46);
+            this.label4.Location = new System.Drawing.Point(109, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 27;
@@ -410,11 +412,31 @@
             this.toolStripStatusLabel.Text = "Set Sigma (standard definition) and Mu (mean) values and click \'Load Sensor Data\'" +
     " to begin";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(336, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Sensor A";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(557, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Sensor B";
+            // 
             // DataProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 430);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -492,6 +514,8 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

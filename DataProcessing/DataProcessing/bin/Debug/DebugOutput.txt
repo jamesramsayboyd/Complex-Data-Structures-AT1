@@ -1,37 +1,16 @@
 *** Debug Output for MSSS Data Processing application ***
 
 New data set loaded: sigma = 10, mu = 50
-*Sensor A* Selection Sort time: 220 milliseconds
-*Sensor A, search target 0* Binary Search time (Iterative): 1714 ticks
-*Sensor B, search target 0* Binary Search time (Recursive): 1953 ticks
-*Sensor A, search target 50* Binary Search time (Iterative): 194 ticks
-*Sensor B, search target 50* Binary Search time (Recursive): 198 ticks
-*Sensor A, search target 80* Binary Search time (Iterative): 377 ticks
-*Sensor B, search target 80* Binary Search time (Recursive): 303 ticks
 
-New data set loaded: sigma = 15, mu = 45
-*Sensor A* Insertion Sort time: 257 milliseconds
-*Sensor A, search target 0* Binary Search time (Iterative): 56 ticks
-*Sensor B, search target 0* Binary Search time (Recursive): 58 ticks
-*Sensor A, search target 50* Binary Search time (Iterative): 253 ticks
-*Sensor B, search target 50* Binary Search time (Recursive): 289 ticks
-*Sensor A, search target 100* Binary Search time (Iterative): 374 ticks
-*Sensor B, search target 100* Binary Search time (Recursive): 379 ticks
-
-New data set loaded: sigma = 20, mu = 65
-*Sensor B* Selection Sort time: 182 milliseconds
-*Sensor B, search target 0* Binary Search time (Iterative): 71 ticks
-*Sensor B, search target 0* Binary Search time (Recursive): 74 ticks
-*Sensor B, search target 60* Binary Search time (Iterative): 150 ticks
-*Sensor B, search target 60* Binary Search time (Recursive): 189 ticks
-*Sensor B, search target 120* Binary Search time (Iterative): 273 ticks
-*Sensor B, search target 120* Binary Search time (Recursive): 276 ticks
-
-New data set loaded: sigma = 12, mu = 75
-*Sensor B* Insertion Sort time: 249 milliseconds
-*Sensor B, search target 30* Binary Search time (Iterative): 61 ticks
-*Sensor B, search target 30* Binary Search time (Recursive): 76 ticks
-*Sensor B, search target 75* Binary Search time (Iterative): 219 ticks
-*Sensor B, search target 75* Binary Search time (Recursive): 192 ticks
-*Sensor B, search target 130* Binary Search time (Iterative): 329 ticks
-*Sensor B, search target 130* Binary Search time (Recursive): 382 ticks
+New data set loaded: sigma = 15, mu = 65
+*Sensor A* Selection Sort time: 193 milliseconds
+*Sensor A* Insertion Sort time: 112 milliseconds
+*Sensor B* Selection Sort time: 188 milliseconds
+*Sensor B* Insertion Sort time: 110 milliseconds
+*Sensor A, search target 12* Binary Search time (Iterative): 1738 ticks
+*Sensor B, search target 50* Binary Search time (Recursive): 1970 ticks
+*Sensor B, search target 120* Binary Search time (Recursive): 391 ticks
+*Sensor A, search target 120* Binary Search time (Iterative): 390 ticks
+*Sensor B, search target 120* Binary Search time (Recursive): 397 ticks
+*Sensor B, search target 50* Binary Search time (Recursive): 98 ticks
+*Sensor B, search target 0* Binary Search time (Iterative): 72 ticks
