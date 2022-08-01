@@ -4,6 +4,12 @@
         <name>DataProcessing</name>
     </assembly>
     <members>
+        <member name="M:DataProcessing.DataProcessing.#ctor">
+            <summary>
+            Initialises application, sets tooltip messages
+            Creates a log file for debug and testing output
+            </summary>
+        </member>
         <member name="F:DataProcessing.DataProcessing.sensorA">
             <summary>
             4.1 Create two data structures using the LinkedList class. The data must be of type "double"
@@ -67,7 +73,7 @@
         </member>
         <member name="M:DataProcessing.DataProcessing.EnableControls">
             <summary>
-            Buttons and textboxes are marked Enabled = false by default for error trapping purposes
+            Buttons and textboxes are disabled by default for error trapping purposes
             and only enabled once data has been loaded
             </summary>
         </member>
@@ -84,16 +90,6 @@
             4.8	Create a method called “InsertionSort” which has a single parameter of type LinkedList, 
             while the calling code argument is the linkedlist name. 
             </summary>
-            <param name="list"></param>
-            <returns></returns>
-        </member>
-        <member name="M:DataProcessing.DataProcessing.TimeSortFunction(System.Func{System.Collections.Generic.LinkedList{System.Double},System.Boolean},System.Collections.Generic.LinkedList{System.Double})">
-            <summary>
-            A method that takes one of the Sort methods as a parameter using the Func delegate
-            and times the duration of the operation, returning the time in milliseconds formatted to 
-            a string
-            </summary>
-            <param name="function"></param>
             <param name="list"></param>
             <returns></returns>
         </member>

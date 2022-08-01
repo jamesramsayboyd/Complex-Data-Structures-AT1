@@ -73,6 +73,7 @@
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderA,
             this.columnHeaderB});
+            this.listView.Enabled = false;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(24, 118);
             this.listView.Name = "listView";
@@ -93,6 +94,7 @@
             // 
             // listBoxA
             // 
+            this.listBoxA.Enabled = false;
             this.listBoxA.FormattingEnabled = true;
             this.listBoxA.Location = new System.Drawing.Point(312, 63);
             this.listBoxA.Name = "listBoxA";
@@ -102,6 +104,7 @@
             // 
             // listBoxB
             // 
+            this.listBoxB.Enabled = false;
             this.listBoxB.FormattingEnabled = true;
             this.listBoxB.Location = new System.Drawing.Point(529, 63);
             this.listBoxB.Name = "listBoxB";
@@ -291,6 +294,7 @@
             // 
             // textBoxIterativeA
             // 
+            this.textBoxIterativeA.Enabled = false;
             this.textBoxIterativeA.Location = new System.Drawing.Point(207, 140);
             this.textBoxIterativeA.Name = "textBoxIterativeA";
             this.textBoxIterativeA.ReadOnly = true;
@@ -299,6 +303,7 @@
             // 
             // textBoxRecursiveA
             // 
+            this.textBoxRecursiveA.Enabled = false;
             this.textBoxRecursiveA.Location = new System.Drawing.Point(207, 218);
             this.textBoxRecursiveA.Name = "textBoxRecursiveA";
             this.textBoxRecursiveA.ReadOnly = true;
@@ -307,6 +312,7 @@
             // 
             // textBoxSelectionA
             // 
+            this.textBoxSelectionA.Enabled = false;
             this.textBoxSelectionA.Location = new System.Drawing.Point(207, 297);
             this.textBoxSelectionA.Name = "textBoxSelectionA";
             this.textBoxSelectionA.ReadOnly = true;
@@ -315,6 +321,7 @@
             // 
             // textBoxInsertionA
             // 
+            this.textBoxInsertionA.Enabled = false;
             this.textBoxInsertionA.Location = new System.Drawing.Point(207, 369);
             this.textBoxInsertionA.Name = "textBoxInsertionA";
             this.textBoxInsertionA.ReadOnly = true;
@@ -323,6 +330,7 @@
             // 
             // textBoxIterativeB
             // 
+            this.textBoxIterativeB.Enabled = false;
             this.textBoxIterativeB.Location = new System.Drawing.Point(429, 140);
             this.textBoxIterativeB.Name = "textBoxIterativeB";
             this.textBoxIterativeB.ReadOnly = true;
@@ -331,6 +339,7 @@
             // 
             // textBoxRecursiveB
             // 
+            this.textBoxRecursiveB.Enabled = false;
             this.textBoxRecursiveB.Location = new System.Drawing.Point(429, 218);
             this.textBoxRecursiveB.Name = "textBoxRecursiveB";
             this.textBoxRecursiveB.ReadOnly = true;
@@ -339,6 +348,7 @@
             // 
             // textBoxSelectionB
             // 
+            this.textBoxSelectionB.Enabled = false;
             this.textBoxSelectionB.Location = new System.Drawing.Point(429, 297);
             this.textBoxSelectionB.Name = "textBoxSelectionB";
             this.textBoxSelectionB.ReadOnly = true;
@@ -347,6 +357,7 @@
             // 
             // textBoxInsertionB
             // 
+            this.textBoxInsertionB.Enabled = false;
             this.textBoxInsertionB.Location = new System.Drawing.Point(429, 369);
             this.textBoxInsertionB.Name = "textBoxInsertionB";
             this.textBoxInsertionB.ReadOnly = true;
@@ -374,9 +385,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(237, 20);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(169, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 13);
+            this.label5.Size = new System.Drawing.Size(335, 29);
             this.label5.TabIndex = 28;
             this.label5.Text = "MSSS DATA PROCESSING";
             // 
@@ -392,6 +404,7 @@
             // 
             // toolStripStatusLabel
             // 
+            this.toolStripStatusLabel.ForeColor = System.Drawing.Color.Black;
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(488, 17);
             this.toolStripStatusLabel.Text = "Set Sigma (standard definition) and Mu (mean) values and click \'Load Sensor Data\'" +
