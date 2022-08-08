@@ -35,6 +35,7 @@ namespace DataProcessing
             Trace.WriteLine("*** Debug Output for MSSS Data Processing application ***");
         }
 
+        #region GLOBAL VARIABLES/METHODS
         /// <summary>
         /// 4.1 Create two data structures using the LinkedList class. The data must be of type "double"
         /// The two LinkedLists are to be declared as global within the public partial class
@@ -92,6 +93,7 @@ namespace DataProcessing
             DisplayListBoxData(sensorB, listBoxB);
             ToolStripMessage(1);
         }
+        #endregion GLOBAL VARIABLES/METHODS
 
         #region UTILITIES
         /// <summary>
@@ -265,17 +267,6 @@ namespace DataProcessing
             }
             return true;
         }
-
-        // Not used
-        //private string TimeSortFunction(Func<LinkedList<double>, Boolean> function, LinkedList<double> list)
-        //{
-        //    Stopwatch st = new Stopwatch();
-        //    st.Start();
-        //    function(list);
-        //    st.Stop();
-        //    TimeSpan ts = st.Elapsed;
-        //    return ts.Milliseconds.ToString() + " milliseconds";
-        //}
         #endregion SORT METHODS
 
         #region SEARCH METHODS
@@ -346,30 +337,6 @@ namespace DataProcessing
             }
             return minimum;
         }
-
-        /// <summary>
-        /// A method that takes a Sort method as a parameter and times the duration taken, returning a Tuple
-        /// containing the index returned by the sort method as Item 1 and a formatted string of the number 
-        /// of ticks as Item 2
-        /// </summary>
-        /// <param name="function"></param>
-        /// <param name="list"></param>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="c"></param>
-        /// <returns></returns>
-        private Tuple<int, string> TimeSearchFunction(Func<LinkedList<double>, int, int, int, int> function, LinkedList<double> list, int a, int b, int c)
-        {
-            int index;
-            string tickCount;
-            Stopwatch st = new Stopwatch();
-            st.Start();
-            index = function(list, a, b, c);
-            st.Stop();
-            TimeSpan ts = st.Elapsed;
-            tickCount = ts.Ticks.ToString() + " ticks";
-            return new Tuple<int, string>(index, tickCount);
-        }
         #endregion SEARCH METHODS
 
         #region UI BUTTON METHODS
@@ -386,8 +353,9 @@ namespace DataProcessing
         {
             if (!string.IsNullOrEmpty(textBoxSearchA.Text))
             {
-                if (sensorA.First.Value == sensorA.Min()) // Tests whether LinkedList is sorted
+                if (SelectionSort(sensorA))
                 {
+                    DisplayListBoxData(sensorA, listBoxA);
                     int searchTarget = int.Parse(textBoxSearchA.Text);
                     var stopwatch = Stopwatch.StartNew();
                     int index = BinarySearchIterative(sensorA, searchTarget, 0, NumberOfNodes(sensorA));
@@ -396,11 +364,7 @@ namespace DataProcessing
                     SelectListBoxRange(listBoxA, index);
                     textBoxIterativeA.Text = ts.Ticks.ToString() + " ticks";
                     ToolStripMessage(5);
-                    Trace.WriteLine("*Sensor A, search target " + searchTarget + "* Binary Search time (Iterative): " + ts.Ticks.ToString() + " ticks");
-                }
-                else
-                {
-                    ToolStripMessage(2);
+                    Trace.WriteLine("*Sensor A*, search target " + searchTarget + "* Binary Search time (Iterative): " + ts.Ticks.ToString() + " ticks");
                 }
             }
             else
@@ -413,8 +377,9 @@ namespace DataProcessing
         {
             if (!string.IsNullOrEmpty(textBoxSearchA.Text))
             {
-                if (sensorA.First.Value == sensorA.Min()) // Tests whether LinkedList is sorted
+                if (SelectionSort(sensorA))
                 {
+                    DisplayListBoxData(sensorA, listBoxA);
                     int searchTarget = int.Parse(textBoxSearchA.Text);
                     var stopwatch = Stopwatch.StartNew();
                     int index = BinarySearchRecursive(sensorA, searchTarget, 0, NumberOfNodes(sensorA));
@@ -423,11 +388,7 @@ namespace DataProcessing
                     SelectListBoxRange(listBoxA, index);
                     textBoxRecursiveA.Text = ts.Ticks.ToString() + " ticks";
                     ToolStripMessage(5);
-                    Trace.WriteLine("*Sensor B, search target " + searchTarget + "* Binary Search time (Recursive): " + ts.Ticks.ToString() + " ticks");
-                }
-                else
-                {
-                    ToolStripMessage(2);
+                    Trace.WriteLine("*Sensor A*, search target " + searchTarget + "* Binary Search time (Recursive): " + ts.Ticks.ToString() + " ticks");
                 }
             }
             else
@@ -440,8 +401,9 @@ namespace DataProcessing
         {
             if (!string.IsNullOrEmpty(textBoxSearchB.Text))
             {
-                if (sensorB.First.Value == sensorB.Min()) // Tests whether LinkedList is sorted
+                if (SelectionSort(sensorB))
                 {
+                    DisplayListBoxData(sensorB, listBoxB);
                     int searchTarget = int.Parse(textBoxSearchB.Text);
                     var stopwatch = Stopwatch.StartNew();
                     int index = BinarySearchIterative(sensorB, searchTarget, 0, NumberOfNodes(sensorB));
@@ -450,11 +412,7 @@ namespace DataProcessing
                     SelectListBoxRange(listBoxB, index);
                     textBoxIterativeB.Text = ts.Ticks.ToString() + " ticks";
                     ToolStripMessage(5);
-                    Trace.WriteLine("*Sensor B, search target " + searchTarget + "* Binary Search time (Iterative): " + ts.Ticks.ToString() + " ticks");
-                }
-                else
-                {
-                    ToolStripMessage(2);
+                    Trace.WriteLine("*Sensor B*, search target " + searchTarget + "* Binary Search time (Iterative): " + ts.Ticks.ToString() + " ticks");
                 }
             }
             else
@@ -467,8 +425,9 @@ namespace DataProcessing
         {
             if (!string.IsNullOrEmpty(textBoxSearchB.Text))
             {
-                if (sensorB.First.Value == sensorB.Min()) // Tests whether LinkedList is sorted
+                if (SelectionSort(sensorB))
                 {
+                    DisplayListBoxData(sensorB, listBoxB);
                     int searchTarget = int.Parse(textBoxSearchB.Text);
                     var stopwatch = Stopwatch.StartNew();
                     int index = BinarySearchRecursive(sensorB, searchTarget, 0, NumberOfNodes(sensorB));
@@ -477,11 +436,7 @@ namespace DataProcessing
                     SelectListBoxRange(listBoxB, index);
                     textBoxRecursiveB.Text = ts.Ticks.ToString() + " ticks";
                     ToolStripMessage(5);
-                    Trace.WriteLine("*Sensor B, search target " + searchTarget + "* Binary Search time (Recursive): " + ts.Ticks.ToString() + " ticks");
-                }
-                else
-                {
-                    ToolStripMessage(2);
+                    Trace.WriteLine("*Sensor B*, search target " + searchTarget + "* Binary Search time (Recursive): " + ts.Ticks.ToString() + " ticks");
                 }
             }
             else
@@ -612,7 +567,6 @@ namespace DataProcessing
             toolTip.SetToolTip(textBoxSelectionB, "The time taken for the Selection Sort operation (in milliseconds)");
             toolTip.SetToolTip(textBoxInsertionA, "The time taken for the Insertion Sort operation (in milliseconds)");
             toolTip.SetToolTip(textBoxInsertionB, "The time taken for the Insertion Sort operation (in milliseconds)");
-
         }
         #endregion USER MESSAGING
     }

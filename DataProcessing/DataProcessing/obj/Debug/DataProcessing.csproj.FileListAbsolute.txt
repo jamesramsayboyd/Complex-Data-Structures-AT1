@@ -26,3 +26,31 @@ C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataP
 C:\Users\James\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.pdb
 C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\bin\Debug\Galileo.dll
 C:\Users\30041547\Documents\GitHub\Complex-Data-Structures-AT1\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CopyComplete
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.exe.config
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.xml
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.exe
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.pdb
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\Galileo.dll
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.AssemblyReference.cache
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.SuggestedBindingRedirects.cache
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.DataProcessing.resources
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.Properties.Resources.resources
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.GenerateResource.cache
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CoreCompileInputs.cache
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CopyComplete
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.exe
+D:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.pdb
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.exe.config
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.xml
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.exe
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\DataProcessing.pdb
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\bin\Debug\Galileo.dll
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.AssemblyReference.cache
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.SuggestedBindingRedirects.cache
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.DataProcessing.resources
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.Properties.Resources.resources
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.GenerateResource.cache
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CoreCompileInputs.cache
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.csproj.CopyComplete
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.exe
+E:\TAFE\ICT50220 Advanced Programming\Day 1\Cluster - Complex Data Structures\AT1\Final\DataProcessing\DataProcessing\obj\Debug\DataProcessing.pdb

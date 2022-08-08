@@ -119,19 +119,6 @@
             <param name="numberOfNodes"></param>
             <returns></returns>
         </member>
-        <member name="M:DataProcessing.DataProcessing.TimeSearchFunction(System.Func{System.Collections.Generic.LinkedList{System.Double},System.Int32,System.Int32,System.Int32,System.Int32},System.Collections.Generic.LinkedList{System.Double},System.Int32,System.Int32,System.Int32)">
-            <summary>
-            A method that takes a Sort method as a parameter and times the duration taken, returning a Tuple
-            containing the index returned by the sort method as Item 1 and a formatted string of the number 
-            of ticks as Item 2
-            </summary>
-            <param name="function"></param>
-            <param name="list"></param>
-            <param name="a"></param>
-            <param name="b"></param>
-            <param name="c"></param>
-            <returns></returns>
-        </member>
         <member name="M:DataProcessing.DataProcessing.buttonBinaryIterativeA_Click(System.Object,System.EventArgs)">
             <summary>
             4.11	Create four button click methods that will search the LinkedList for a value entered into a 
